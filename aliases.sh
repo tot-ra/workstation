@@ -9,3 +9,5 @@ alias n="nvim"
 alias ls="eza --icons=always"
 
 alias sl="screen -ls"
+
+alias cat="bat"

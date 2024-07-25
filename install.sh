@@ -50,6 +50,14 @@ echo 'alias ls="eza --icons=always"' >> ~/.zshrc
 echo "Install zoxide a better cd"
 brew install zoxide
 
+echo "Install tmux"
+brew install tmux
+
+
+echo "Install bat, alternative to cat"
+brew install bat
+
+
 echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 source ~/.zshrc
