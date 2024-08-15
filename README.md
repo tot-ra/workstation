@@ -16,6 +16,8 @@ cat ~/.ssh/id_rsa.pub
 
 
 ```bash
+chmod +x install.sh
 git clone git@github.com:tot-ra/mac-work.git ~/git/mac-work
+~/git/mac-work/install.sh
 echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 ```
