@@ -7,7 +7,6 @@ echo "Installing git"
 brew install git
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
-git config --global branch.autosetuprebase always
 
 
 echo "Installing nvm / node env"
