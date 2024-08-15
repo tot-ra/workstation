@@ -1,4 +1,4 @@
-## Mac workstation setup
+## 💻 Mac workstation setup
 Yay. You got new laptop. Now you need to set it up
 
 ### Typical apps
