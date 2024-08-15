@@ -60,6 +60,7 @@ brew install kubectl
 
 echo "Install k9s"
 brew install derailed/k9s/k9s
+export KUBE_EDITOR=nvim
 
 echo "Installing dry"
 curl -sSf https://moncho.github.io/dry/dryup.sh | sudo sh
