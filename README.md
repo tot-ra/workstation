@@ -4,7 +4,8 @@ Yay. You got new laptop. Now you need to set it up
 ### Typical apps
 - iTerm
 - Goland
-- VSCode
+- VSCode + plugins:
+  - Code Coverage, Coverage gutters, Database client JDBC, ESLint, github copilot, go, mermaid preview mermaid support, mermaid syntax highlighting, partial diff, remote ssh, version lense, live preview, isort, go
 - Notion
 - Slack
 - Sequel Pro
