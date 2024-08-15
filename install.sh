@@ -52,13 +52,6 @@ brew install neovim
 git config --global core.editor nvim
 
 
-
-# Accessing popular servers
-brew install postgresql
-brew install redis
-
-
-
 ## Docker and kubernetes
 
 echo "Install kubectl"
@@ -77,6 +70,7 @@ sudo chmod 755 /usr/local/bin/dry
 
 # Golang
 brew install go@1.22
+./install-strage.sh
 ./install-node.sh
 ./install-python.sh
 
