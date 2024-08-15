@@ -15,8 +15,6 @@ compaudit | xargs chmod g-w,o-w
 echo "Install fonts"
 brew install font-hack-nerd-font
 
-fontforge -script font-patcher 
-
 echo "Install powerlevel10k"
 brew install powerlevel10k
 echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
