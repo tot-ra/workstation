@@ -12,3 +12,5 @@ pip install --upgrade pip
 pip install virtualenv
 
 . ~/virtualenv/v1/bin/activate
+
+pip install awscli
