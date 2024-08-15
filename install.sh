@@ -22,12 +22,10 @@ echo "Installing zsh"
 sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 compaudit | xargs chmod g-w,o-w
 
-#echo "Install Wezterm"
-#brew install --cask wezterm
-
 echo "Install powerlevel10k"
 brew install powerlevel10k
 echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
+p10k configure
 
 echo "Install zsh-autosuggestions"
 brew install zsh-autosuggestions
@@ -41,7 +39,6 @@ echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlight
 
 echo "Install eza a better ls"
 brew install eza
-echo 'alias ls="eza --icons=always"' >> ~/.zshrc
 
 echo "Install zoxide a better cd"
 brew install zoxide
@@ -57,3 +54,7 @@ brew install bat
 echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 source ~/.zshrc
+
+
+#echo "Install Wezterm"
+#brew install --cask wezterm
