@@ -8,10 +8,6 @@ brew install git
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
 
-echo "Installing dry"
-curl -sSf https://moncho.github.io/dry/dryup.sh | sudo sh
-sudo chmod 755 /usr/local/bin/dry
-
 echo "Installing zsh"
 sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 compaudit | xargs chmod g-w,o-w
@@ -40,11 +36,6 @@ brew install zoxide
 echo "Install bat, alternative to cat"
 brew install bat
 
-echo "Install kubectl"
-brew install kubectl
-
-echo "Install k9s"
-brew install derailed/k9s/k9s
 
 echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
@@ -59,6 +50,22 @@ git config --global core.editor nvim
 # Accessing popular servers
 brew install postgresql
 brew install redis
+
+
+
+## Docker and kubernetes
+
+echo "Install kubectl"
+brew install kubectl
+
+echo "Install k9s"
+brew install derailed/k9s/k9s
+
+echo "Installing dry"
+curl -sSf https://moncho.github.io/dry/dryup.sh | sudo sh
+sudo chmod 755 /usr/local/bin/dry
+
+
 
 
 # Golang
