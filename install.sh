@@ -8,12 +8,6 @@ brew install git
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
 
-
-echo "Installing nvm / node env"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-npm completion >> ~/.bash_profile
-npm completion >> ~/.zshrc
-
 echo "Installing dry"
 curl -sSf https://moncho.github.io/dry/dryup.sh | sudo sh
 sudo chmod 755 /usr/local/bin/dry
@@ -46,14 +40,34 @@ brew install zoxide
 echo "Install bat, alternative to cat"
 brew install bat
 
+echo "Install kubectl"
+brew install kubectl
+
 
 echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 source ~/.zshrc
 
-
 echo "Install neovim"
 brew install neovim
+
+
+
+# Accessing popular servers
+brew install postgresql
+brew install redis
+
+
+# For Python
+brew install zlib openssl
+brew install freetype
+brew install pyenv
+export PATH="$HOME/.pyenv/shims:$PATH"
+pyenv install --skip-existing 3.11
+pyenv global 3.11
+pyenv global
+
+
 
 # echo "Install tmux"
 # brew install tmux
