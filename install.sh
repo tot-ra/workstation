@@ -43,6 +43,8 @@ brew install bat
 echo "Install kubectl"
 brew install kubectl
 
+echo "Install k9s"
+brew install derailed/k9s/k9s
 
 echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
