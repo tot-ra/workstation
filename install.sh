@@ -43,10 +43,6 @@ brew install eza
 echo "Install zoxide a better cd"
 brew install zoxide
 
-echo "Install tmux"
-brew install tmux
-
-
 echo "Install bat, alternative to cat"
 brew install bat
 
@@ -56,5 +52,11 @@ echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 source ~/.zshrc
 
 
-#echo "Install Wezterm"
-#brew install --cask wezterm
+echo "Install neovim"
+brew install neovim
+
+# echo "Install tmux"
+# brew install tmux
+
+# echo "Install Wezterm"
+# brew install --cask wezterm
