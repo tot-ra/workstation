@@ -32,16 +32,7 @@ echo "Install zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
 echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 
-
-echo "Install eza a better ls"
-brew install eza
-
-echo "Install zoxide a better cd"
-brew install zoxide
-
-echo "Install bat, alternative to cat"
-brew install bat
-
+./install-cli.sh
 
 echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
