@@ -1,9 +1,7 @@
-echo "Installing zsh"
-sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-compaudit | xargs chmod g-w,o-w
-
 echo "Installing brew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/artjom/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Installing git"
 brew install git
@@ -21,13 +19,12 @@ echo "Installing dry"
 curl -sSf https://moncho.github.io/dry/dryup.sh | sudo sh
 sudo chmod 755 /usr/local/bin/dry
 
+echo "Installing zsh"
+sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+compaudit | xargs chmod g-w,o-w
 
-echo "Install Wezterm"
-brew install --cask wezterm
-
-echo "Install git"
-brew install git
-
+#echo "Install Wezterm"
+#brew install --cask wezterm
 
 echo "Install powerlevel10k"
 brew install powerlevel10k
