@@ -50,6 +50,7 @@ source ~/.zshrc
 
 echo "Install neovim"
 brew install neovim
+git config --global core.editor nvim
 
 
 
