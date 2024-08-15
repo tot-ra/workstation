@@ -8,6 +8,7 @@ Yay. You got new laptop. Now you need to set it up
 - Notion
 - Slack
 - Sequel Pro
+- Docker4Mac
 
 ### Github 
 ```bash
