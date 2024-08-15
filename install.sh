@@ -58,16 +58,6 @@ brew install postgresql
 brew install redis
 
 
-# For Python
-brew install zlib openssl
-brew install freetype
-brew install pyenv
-export PATH="$HOME/.pyenv/shims:$PATH"
-pyenv install --skip-existing 3.11
-pyenv global 3.11
-pyenv global
-
-
 
 # echo "Install tmux"
 # brew install tmux
