@@ -10,6 +10,10 @@ Yay. You got new laptop. Now you need to set it up
 - Sequel Pro
 - Docker4Mac
 
+### Fonts
+- Install [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
+  - Update iTerm to use it
+
 ### Github 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
