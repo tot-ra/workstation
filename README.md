@@ -2,10 +2,12 @@
 Yay. You got new laptop. Now you need to set it up
 
 ### Typical apps
+- iTerm
 - Goland
 - VSCode
 - Notion
 - Slack
+- Sequel Pro
 
 ### Github 
 ```bash
