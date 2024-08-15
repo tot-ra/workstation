@@ -59,6 +59,11 @@ brew install postgresql
 brew install redis
 
 
+# Golang
+brew install go@1.22
+./install-node.sh
+./install-python.sh
+
 
 # echo "Install tmux"
 # brew install tmux
