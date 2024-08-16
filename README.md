@@ -14,7 +14,11 @@ Yay. You got new laptop. Now you need to set it up
 - Slack
 - Discord
 - Notion
+
+Optional:
 - Microsoft TODO
+- Davinci resolve
+- Arduino IDE
 
 ### Fonts
 - Install [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
