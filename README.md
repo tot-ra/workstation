@@ -8,8 +8,8 @@ Yay. You got new laptop. Now you need to set it up
   - Code Coverage, Coverage gutters, Database client JDBC, ESLint, github copilot, go, mermaid preview mermaid support, mermaid syntax highlighting, partial diff, remote ssh, version lense, live preview, isort, go
 - Notion
 - Slack
-- Sequel Pro
 - Docker4Mac
+- [Postman](https://www.postman.com/downloads/)
 
 ### Fonts
 - Install [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
