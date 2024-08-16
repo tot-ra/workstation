@@ -4,13 +4,17 @@ Yay. You got new laptop. Now you need to set it up
 ### Typical apps
 - iTerm
 - Goland
-- VSCode + plugins:
-  - Code Coverage, Coverage gutters, Database client JDBC, ESLint, github copilot, go, mermaid preview mermaid support, mermaid syntax highlighting, partial diff, remote ssh, version lense, live preview, isort, go
-- Notion
-- Slack
 - Docker4Mac
 - [Postman](https://www.postman.com/downloads/)
 - [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
+- RealVNC
+- NordPass
+- VSCode + plugins:
+  - Code Coverage, Coverage gutters, Database client JDBC, ESLint, github copilot, go, mermaid preview mermaid support, mermaid syntax highlighting, partial diff, remote ssh, version lense, live preview, isort, go
+- Slack
+- Discord
+- Notion
+- Microsoft TODO
 
 ### Fonts
 - Install [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
