@@ -11,3 +11,5 @@ alias ls="eza --icons=always"
 alias sl="screen -ls"
 
 alias cat="bat"
+
+alias python="$(brew --prefix python@3.11)/libexec/bin/python"
