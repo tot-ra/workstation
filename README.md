@@ -10,6 +10,7 @@ Yay. You got new laptop. Now you need to set it up
 - Slack
 - Docker4Mac
 - [Postman](https://www.postman.com/downloads/)
+- [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
 
 ### Fonts
 - Install [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
