@@ -9,6 +9,7 @@ Yay. You got new laptop. Now you need to set it up
 - [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
 - RealVNC
 - NordPass
+- [Tailscale](https://tailscale.com/)
 - VSCode + plugins:
   - Code Coverage, Coverage gutters, Database client JDBC, ESLint, github copilot, go, mermaid preview mermaid support, mermaid syntax highlighting, partial diff, remote ssh, version lense, live preview, isort, go
 - Slack
