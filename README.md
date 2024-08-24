@@ -17,6 +17,7 @@ Yay. You got new laptop. Now you need to set it up
 - Notion
 
 Optional:
+- [GrandPerspective](https://grandperspectiv.sourceforge.net/)
 - Microsoft TODO
 - Davinci resolve
 - Arduino IDE
