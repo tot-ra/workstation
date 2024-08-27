@@ -18,6 +18,7 @@ Yay. You got new laptop. Now you need to set it up
 
 Optional:
 - [GrandPerspective](https://grandperspectiv.sourceforge.net/)
+- [Monocle](https://monokle.io/download)
 - Microsoft TODO
 - Davinci resolve
 - Arduino IDE
