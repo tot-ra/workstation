@@ -17,9 +17,9 @@ Yay. You got new laptop. Now you need to set it up
 - RealVNC
 - [Tailscale](https://tailscale.com/)
 - [Rectangle](https://rectangleapp.com/) to resize windows
-- [LM studio](https://lmstudio.ai/) as local alternative to chatgpt
 - [Keka](https://www.keka.io/en/) as archive manager
 - [Kap](https://getkap.co/) for video recording as alternative to Quicktime
+- [VLC](https://get.videolan.org/vlc/3.0.21/macosx/vlc-3.0.21-arm64.dmg) for playing videos
 - VSCode + plugins:
   - Open vscode, click `Command + Shift + P` and install vscode in path to have `code` working in terminal
 ```bash
@@ -28,6 +28,12 @@ Yay. You got new laptop. Now you need to set it up
 - Slack
 - Discord
 - Notion
+- [LM studio](https://lmstudio.ai/) as local alternative to chatgpt
+```
+brew install --cask lm-studio
+~/.cache/lm-studio/bin/lms bootstrap
+lms load lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF --identifier llama
+```
 
 Optional:
 - [GrandPerspective](https://grandperspectiv.sourceforge.net/) to see HDD usage
