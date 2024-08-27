@@ -28,3 +28,6 @@ brew install wget
 
 echo "Install telnet for oldies"
 brew install telnet
+
+echo "Install tldr as alternative to man"
+brew install tldr
