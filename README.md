@@ -1,14 +1,20 @@
 ## 💻 Mac workstation setup
 Yay. You got new laptop. Now you need to set it up
 
+- Settings -> Mouse -> disable natural scrolling
+- Settings -> Keyboard -> Key Repeat -> Fast
+- Settings -> Keyboard -> Delay Until Repeat -> Short
+- Settings -> Keyboard -> Text Input -> Disable most things
+
+
 ### Typical apps
+- Password manager
 - iTerm
 - Goland
 - Docker4Mac
 - [Postman](https://www.postman.com/downloads/)
 - [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
 - RealVNC
-- NordPass password manager
 - [Tailscale](https://tailscale.com/)
 - [Rectangle](https://rectangleapp.com/) to resize windows
 - [LM studio](https://lmstudio.ai/) as local alternative to chatgpt
