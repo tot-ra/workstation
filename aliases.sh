@@ -1,4 +1,4 @@
-alias code='open -a "Visual Studio Code" .'
+# alias code='open -a "Visual Studio Code" .'
 
 # better cd
 eval "$(zoxide init zsh)"
