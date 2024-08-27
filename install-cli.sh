@@ -22,3 +22,9 @@ brew install btop
 
 echo "Install json viewer"
 brew install jless
+
+echo "Install wget to download files as alternative to curl"
+brew install wget
+
+echo "Install telnet for oldies"
+brew install telnet
