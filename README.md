@@ -8,8 +8,12 @@ Yay. You got new laptop. Now you need to set it up
 - [Postman](https://www.postman.com/downloads/)
 - [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
 - RealVNC
-- NordPass
+- NordPass password manager
 - [Tailscale](https://tailscale.com/)
+- [Rectangle](https://rectangleapp.com/) to resize windows
+- [LM studio](https://lmstudio.ai/) as local alternative to chatgpt
+- [Keka](https://www.keka.io/en/) as archive manager
+- [Kap](https://getkap.co/) for video recording as alternative to Quicktime
 - VSCode + plugins:
   - Code Coverage, Coverage gutters, Database client JDBC, ESLint, github copilot, go, mermaid preview mermaid support, mermaid syntax highlighting, partial diff, remote ssh, version lense, live preview, isort, go
 - Slack
@@ -19,8 +23,6 @@ Yay. You got new laptop. Now you need to set it up
 Optional:
 - [GrandPerspective](https://grandperspectiv.sourceforge.net/) to see HDD usage
 - [Monocle](https://monokle.io/download) to access k8s logs
-- [Rectangle](https://rectangleapp.com/) to resize windows
-- [LM studio](https://lmstudio.ai/) as local alternative to chatgpt
 - Microsoft TODO
 - Davinci resolve
 - Arduino IDE
