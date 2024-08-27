@@ -1,0 +1,13 @@
+markis.code-coverage
+GitHub.copilot
+golang.go
+ms-python.python
+pflannery.vscode-versionlens
+bpruitt-goddard.mermaid-markdown-syntax-highlighting
+ryu1kn.partial-diff
+ryanluker.vscode-coverage-gutters
+cweijan.dbclient-jdbc
+dbaeumer.vscode-eslint
+ms-vscode-remote.remote-ssh
+ms-vscode.live-server
+ms-python.isort
