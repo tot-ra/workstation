@@ -17,8 +17,10 @@ Yay. You got new laptop. Now you need to set it up
 - Notion
 
 Optional:
-- [GrandPerspective](https://grandperspectiv.sourceforge.net/)
-- [Monocle](https://monokle.io/download)
+- [GrandPerspective](https://grandperspectiv.sourceforge.net/) to see HDD usage
+- [Monocle](https://monokle.io/download) to access k8s logs
+- [Rectangle](https://rectangleapp.com/) to resize windows
+- [LM studio](https://lmstudio.ai/) as local alternative to chatgpt
 - Microsoft TODO
 - Davinci resolve
 - Arduino IDE
