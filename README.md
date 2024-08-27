@@ -37,8 +37,9 @@ Optional:
 - Arduino IDE
 
 ### Fonts
-- Install [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
-  - Update iTerm to use it
+- Install [Jetbrains Mono Nerdfont](https://www.nerdfonts.com/font-downloads) or original [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
+  - Update iTerm and IDEs to use it to see nice icons
+  - Use ligatures
 
 ### Github 
 ```bash

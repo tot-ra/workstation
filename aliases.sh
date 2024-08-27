@@ -6,7 +6,7 @@ alias cd="z"
 
 alias n="nvim"
 
-alias ls="eza --icons=always"
+alias ls="eza --long --header --icons --git --octal-permissions --no-user --no-permissions"
 
 alias sl="screen -ls"
 
