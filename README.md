@@ -15,6 +15,7 @@ Yay. You got new laptop. Now you need to set it up
 - [Keka](https://www.keka.io/en/) as archive manager
 - [Kap](https://getkap.co/) for video recording as alternative to Quicktime
 - VSCode + plugins:
+  - Open vscode, click `Command + Shift + P` and install vscode in path to have `code` working in terminal
   - Code Coverage, Coverage gutters, Database client JDBC, ESLint, github copilot, go, mermaid preview mermaid support, mermaid syntax highlighting, partial diff, remote ssh, version lense, live preview, isort, go
 - Slack
 - Discord
