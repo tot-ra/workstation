@@ -66,8 +66,8 @@ brew install go@1.22
 ./install-python.sh
 
 
-# echo "Install tmux"
-# brew install tmux
+echo "Install tmux"
+brew install tmux
 
-# echo "Install Wezterm"
-# brew install --cask wezterm
+# visualize keystrokes on the screen for video recordings
+brew install --cask keycastr
