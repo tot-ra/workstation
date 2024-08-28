@@ -78,3 +78,7 @@ brew install maccy
 # Install DevToys for conversions
 brew install devtoys
 open /Applications/DevToys.app
+
+# Install ai CLI
+git clone https://github.com/tot-ra/ai-cli.git ~/ai-cli
+cd ai-cli && go build ai.go

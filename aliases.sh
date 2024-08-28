@@ -14,4 +14,4 @@ alias cat="bat"
 
 alias python="$(brew --prefix python@3.11)/libexec/bin/python"
 
-alias ai="./git/mac-work/ai.sh"
+source alias ai=~/ai-cli/ai
