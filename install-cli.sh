@@ -32,5 +32,5 @@ brew install telnet
 echo "Install tldr as alternative to man"
 brew install tldr
 
-echo "Install GNU parallel, useful for parallel executions"
+echo "Install GNU parallel, useful for parallel executions, ex: parallel --jobs 3 --delay 2 --timeout 5 --shuf --progress echo {1} ::: 1 2 3"
 brew install parallel
