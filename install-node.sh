@@ -5,3 +5,4 @@ npm completion >> ~/.zshrc
 
 nvm install 16
 nvm install 18
+nvm install 20
