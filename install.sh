@@ -8,6 +8,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Installing git"
 brew install git
+
+echo "Installing git large file storage extension"
+brew install git-lfs
+
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
 
