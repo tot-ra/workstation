@@ -47,17 +47,32 @@ Optional:
   - Update iTerm and IDEs to use it to see nice icons
   - Use ligatures
 
-### Github 
+### Installation
 ```bash
+chmod +x install.sh
+git clone git@github.com:tot-ra/mac-work.git ~/git/mac-work
+~/git/mac-work/install.sh
+echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
+```
+
+### Manual steps after installation
+```bash
+# update github settings
+git config --global user.name "Artjom Kurapov"
+git config --global user.email "artkurapov@gmail.com"
+
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
 cat ~/.ssh/id_rsa.pub
 # add key to github --> https://github.com/settings/ssh/new
 ```
 
 
-```bash
-chmod +x install.sh
-git clone git@github.com:tot-ra/mac-work.git ~/git/mac-work
-~/git/mac-work/install.sh
-echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
+### Neovim configuration
+
+```
+# install typescript, go LSP servers
+:Masonry
+
+# show all characters in markdown
+:set conceallevel=0
 ```

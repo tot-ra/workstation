@@ -3,6 +3,7 @@ sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/ins
 compaudit | xargs chmod g-w,o-w
 
 echo "Install fonts"
+brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 
 echo "Install powerlevel10k"
@@ -29,6 +30,9 @@ brew install yazi ffmpegthumbnailer sevenzip jq poppler fd ripgrep imagemagick f
 echo "Install fzf fuzzy finder"
 brew install fzf
 source <(fzf --zsh)
+
+echo "Install ripgrep finder"
+brew install ripgrep
 
 echo "Install eza a better ls"
 brew install eza

@@ -3,7 +3,10 @@ xcode-select --install
 
 echo "Installing brew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/artjom/.zprofile
+(
+  echo
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
+) >>/Users/artjom/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Installing git"
@@ -12,15 +15,11 @@ brew install git
 echo "Installing git large file storage extension"
 brew install git-lfs
 
-git config --global user.name "Artjom Kurapov"
-git config --global user.email "artkurapov@gmail.com"
-
 ./install-cli.sh
 
 echo "Mount mount.sh"
-echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
+echo "source ~/git/mac-work/mount.sh" >>~/.zshrc
 source ~/.zshrc
-
 
 ## Docker and kubernetes
 echo "Install kubectl"
