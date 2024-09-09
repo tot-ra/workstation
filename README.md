@@ -67,8 +67,9 @@ cat ~/.ssh/id_rsa.pub
 ```
 
 
-### Neovim configuration
-
+### Neovim configuration and cheatsheet
+- `Space` is set as leader
+- `Space` + `gd` - go to definition
 ```
 # install typescript, go LSP servers
 :Masonry
@@ -76,3 +77,25 @@ cat ~/.ssh/id_rsa.pub
 # show all characters in markdown
 :set conceallevel=0
 ```
+
+
+### TMux cheatsheet
+- `F2` is set as leader shortcut
+- `tmux ls` - list sessions
+- `tmux new -s my-session` - create session
+- `tmux a` - attach to new session
+- `tmux a -t my-session` - attach to session by name
+
+Leader (`F2`) and:
+- `:` - command mode
+  - `rename-session my-session` - rename session 
+- `d` - detach from session
+- `c` - create window
+  - `n` - next window
+  - `1` - switch to window 1
+- `r` - reload config
+- `I` - install plugins
+- `"` - split window to panes horizontally
+- `%` - split window to panes vertically
+- `z` - zoom pane (toggle)
+- `(arrows)` - switch to pane
