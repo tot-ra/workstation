@@ -1,13 +1,18 @@
 echo "Update xcode"
 xcode-select --install
 
-echo "Installing brew"
+echo "Installing brew package manager"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (
   echo
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
 ) >>/Users/artjom/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
+# Nix
+echo "Installing nix package manager"
+sh <(curl -L https://nixos.org/nix/install)
 
 echo "Installing git"
 brew install git
