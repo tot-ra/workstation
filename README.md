@@ -57,9 +57,10 @@ echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 
 ### Manual steps after installation
 ```bash
-# update github settings
+#### Update github settings
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
+git config --global pull.rebase false
 
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
 cat ~/.ssh/id_rsa.pub
