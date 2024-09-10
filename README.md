@@ -60,6 +60,10 @@ chmod +x install.sh
 git clone git@github.com:tot-ra/mac-work.git ~/git/mac-work
 ~/git/mac-work/install.sh
 echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
+
+# link nvim and tmux configs to be linked to github repo
+ln -s ~/git/mac-work/.tmux.conf ~/.tmux.conf
+ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 ```
 
 ### Manual steps after installation
@@ -100,7 +104,10 @@ cat ~/.ssh/id_rsa.pub
 ### TMux cheatsheet
 
 - `F3` is set as leader shortcut
-  Leader (`F3`) and:
+
+Leader (`F3`) and:
+
+- `t` - select session
 - r - reload config
 - `I` - install plugins
 - `:` - command mode
