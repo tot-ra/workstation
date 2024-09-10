@@ -9,7 +9,6 @@ echo "Installing brew package manager"
 ) >>/Users/artjom/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-
 # Nix
 echo "Installing nix package manager"
 sh <(curl -L https://nixos.org/nix/install)
@@ -20,7 +19,9 @@ brew install git
 echo "Installing git large file storage extension"
 brew install git-lfs
 
+./install-go.sh
 ./install-cli.sh
+./install-nvim-tmux.sh
 
 echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >>~/.zshrc
@@ -37,10 +38,6 @@ export KUBE_EDITOR=nvim
 echo "Installing dry"
 curl -sSf https://moncho.github.io/dry/dryup.sh | sudo sh
 sudo chmod 755 /usr/local/bin/dry
-
-# Golang
-echo "Installing go 1.22"
-brew install go@1.22
 
 echo "Installing redis"
 brew install redis

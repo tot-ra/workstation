@@ -61,18 +61,6 @@ brew install tldr
 echo "Install GNU parallel, useful for parallel executions, ex: parallel --jobs 3 --delay 2 --timeout 5 --shuf --progress echo {1} ::: 1 2 3"
 brew install parallel
 
-echo "Install neovim"
-brew install neovim
-git config --global core.editor nvim
-
-echo "Install lazyvim"
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
-
-
-echo "Install tmux"
-brew install tmux
-
 # Install ai CLI
 git clone https://github.com/tot-ra/ai-cli.git ~/ai-cli
 cd ai-cli && go build ai.go

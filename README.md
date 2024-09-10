@@ -56,6 +56,9 @@ echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 ```
 
 ### Manual steps after installation
+#### Iterm config changes
+- Enable clipboard access in General -> Selection -> Applications ... may access clipboard
+
 ```bash
 #### Update github settings
 git config --global user.name "Artjom Kurapov"
@@ -71,6 +74,7 @@ cat ~/.ssh/id_rsa.pub
 ### Neovim configuration and cheatsheet
 - `Space` is set as leader
 - `Space` + `gd` - go to definition
+- `Alt` + `j` or `k` - move line up/down
 ```
 # install typescript, go LSP servers
 :Masonry
@@ -91,12 +95,16 @@ Leader (`F2`) and:
 - `:` - command mode
   - `rename-session my-session` - rename session 
 - `d` - detach from session
+
+#### Windows 
 - `c` - create window
   - `n` - next window
   - `1` - switch to window 1
   - `,` - rename window
 - `r` - reload config
 - `I` - install plugins
+
+#### Panes
 - `"` - split window to panes horizontally
 - `%` - split window to panes vertically
 - `z` - zoom pane (toggle)
