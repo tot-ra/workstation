@@ -10,7 +10,7 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Sav
 vim.keymap.set({ "i", "n" }, "<C-z>", "<cmd>u<cr><esc>", { desc = "Undo", remap = true })
 
 -- Ctrl-d to duplicate line
-vim.keymap.set({ "i", "n" }, "<C-d>", "<esc>yyp<esc>", { desc = "Duplicate line", remap = true })
+vim.keymap.set({ "i", "n" }, "<C-d>", "<esc>yyp<esc>i", { desc = "Duplicate line", remap = true })
 vim.keymap.set({ "v" }, "<C-d>", "yp<esc>", { desc = "Duplicate selection", remap = true })
 
 -- F4 to do global search, same as Mac search icon
