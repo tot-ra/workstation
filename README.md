@@ -1,4 +1,5 @@
 ## 💻 Mac workstation setup
+
 Yay. You got new laptop. Now you need to set it up
 
 - Settings -> Mouse -> disable natural scrolling
@@ -6,8 +7,8 @@ Yay. You got new laptop. Now you need to set it up
 - Settings -> Keyboard -> Delay Until Repeat -> Short
 - Settings -> Keyboard -> Text Input -> Disable most things
 
-
 ### Typical apps
+
 - Password manager
 - iTerm
 - Goland
@@ -22,13 +23,16 @@ Yay. You got new laptop. Now you need to set it up
 - [VLC](https://get.videolan.org/vlc/3.0.21/macosx/vlc-3.0.21-arm64.dmg) for playing videos
 - VSCode + plugins:
   - Open vscode, click `Command + Shift + P` and install vscode in path to have `code` working in terminal
+
 ```bash
 ./install-vscode.sh
 ```
+
 - Slack
 - Discord
 - Notion
 - [LM studio](https://lmstudio.ai/) as local alternative to chatgpt
+
 ```
 brew install --cask lm-studio
 ~/.cache/lm-studio/bin/lms bootstrap
@@ -36,6 +40,7 @@ lms load lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF --identifier llama
 ```
 
 Optional:
+
 - [GrandPerspective](https://grandperspectiv.sourceforge.net/) to see HDD usage
 - [Monocle](https://monokle.io/download) to access k8s logs
 - Microsoft TODO
@@ -43,11 +48,13 @@ Optional:
 - Arduino IDE
 
 ### Fonts
+
 - Install [Jetbrains Mono Nerdfont](https://www.nerdfonts.com/font-downloads) or original [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
   - Update iTerm and IDEs to use it to see nice icons
   - Use ligatures
 
 ### Installation
+
 ```bash
 chmod +x install.sh
 git clone git@github.com:tot-ra/mac-work.git ~/git/mac-work
@@ -56,7 +63,14 @@ echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 ```
 
 ### Manual steps after installation
+
+#### Mac settings
+
+- Keyboard -> Function keys -> Use F1.. as function keys
+  (so that tmux leader key would work fine)
+
 #### Iterm config changes
+
 - Enable clipboard access in General -> Selection -> Applications ... may access clipboard
 
 ```bash
@@ -70,11 +84,11 @@ cat ~/.ssh/id_rsa.pub
 # add key to github --> https://github.com/settings/ssh/new
 ```
 
-
 ### Neovim configuration and cheatsheet
+
 - `Space` is set as leader
 - `Space` + `gd` - go to definition
-- `Alt` + `j` or `k` - move line up/down
+
 ```
 # install typescript, go LSP servers
 :Masonry
@@ -83,20 +97,25 @@ cat ~/.ssh/id_rsa.pub
 :set conceallevel=0
 ```
 
-
 ### TMux cheatsheet
-- `F2` is set as leader shortcut
+
+- `F3` is set as leader shortcut
+  Leader (`F3`) and:
+- r - reload config
+- `I` - install plugins
+- `:` - command mode
+  - `rename-session my-session` - rename session
+- `d` - detach from session
+
+## Sessions
+
 - `tmux ls` - list sessions
 - `tmux new -s my-session` - create session
 - `tmux a` - attach to new session
 - `tmux a -t my-session` - attach to session by name
 
-Leader (`F2`) and:
-- `:` - command mode
-  - `rename-session my-session` - rename session 
-- `d` - detach from session
+#### Windows
 
-#### Windows 
 - `c` - create window
   - `n` - next window
   - `1` - switch to window 1
@@ -105,6 +124,7 @@ Leader (`F2`) and:
 - `I` - install plugins
 
 #### Panes
+
 - `"` - split window to panes horizontally
 - `%` - split window to panes vertically
 - `z` - zoom pane (toggle)
