@@ -76,8 +76,10 @@ ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 #### Iterm config changes
 
 - Enable clipboard access in General -> Selection -> Applications ... may access clipboard
+- Pointer -> remove "Open Context Menu" on right mouse click. This is needed for right-click to work in neovim and tmux
 
 ```bash
+set -g mouse on
 #### Update github settings
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
@@ -107,11 +109,12 @@ cat ~/.ssh/id_rsa.pub
 
 Leader (`F3`) and:
 
+- `?` - show key bindings
 - `t` - select session
-- r - reload config
+- `r` - reload config
 - `I` - install plugins
 - `:` - command mode
-  - `rename-session my-session` - rename session
+- `$` - rename session
 - `d` - detach from session
 
 ## Sessions
@@ -124,11 +127,10 @@ Leader (`F3`) and:
 #### Windows
 
 - `c` - create window
-  - `n` - next window
-  - `1` - switch to window 1
-  - `,` - rename window
-- `r` - reload config
-- `I` - install plugins
+- `n` - next window
+- `1` - switch to window 1
+- `,` - rename window
+- `.` - move window
 
 #### Panes
 
@@ -136,4 +138,5 @@ Leader (`F3`) and:
 - `%` - split window to panes vertically
 - `z` - zoom pane (toggle)
 - `(arrows)` - switch to pane
+- `!` - move pane to own window
 - `o` - switch session (interactive with [plugin](https://github.com/omerxx/tmux-sessionx))
