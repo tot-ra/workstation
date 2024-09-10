@@ -90,18 +90,52 @@ cat ~/.ssh/id_rsa.pub
 # add key to github --> https://github.com/settings/ssh/new
 ```
 
-### Neovim configuration and cheatsheet
+## Neovim manual setup
 
-- `Space` is set as leader
-- `Space` + `gd` - go to definition
+https://www.youtube.com/watch?v=qHsMV5LhOEc
+install typescript, go LSP servers
 
 ```
-# install typescript, go LSP servers
 :Masonry
 
 # show all characters in markdown
 :set conceallevel=0
 ```
+
+### Neovim cheatsheet
+
+- `Space` is set as leader
+- `Space` + `gd` - go to definition
+
+## Movement
+
+- `hjkl` - movement up/down/left/right
+- `gg` - go to top of the file
+  - `S+g` - go to end of the file
+- `20G` - go to line 20
+- `5j` - go up 5 lines
+  - `5k` - go down 5 lines
+- `w` jump to next word
+  - `b` jump back to previous word
+- `f` - find character
+
+  - `;` next
+
+- `/` - search
+  - `n` - next hit
+
+### Insert mode
+
+- `o` - en
+
+### Visual mode
+
+- `y` - copy (yield)
+- `p` - paste
+- `d` - cut
+- `dd` - delete line
+- `u` - undo
+- `w` - select word
 
 ### TMux cheatsheet
 
