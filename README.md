@@ -94,9 +94,11 @@ Leader (`F2`) and:
 - `c` - create window
   - `n` - next window
   - `1` - switch to window 1
+  - `,` - rename window
 - `r` - reload config
 - `I` - install plugins
 - `"` - split window to panes horizontally
 - `%` - split window to panes vertically
 - `z` - zoom pane (toggle)
 - `(arrows)` - switch to pane
+- `o` - switch session (interactive with [plugin](https://github.com/omerxx/tmux-sessionx))
