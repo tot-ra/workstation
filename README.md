@@ -9,7 +9,6 @@ Yay. You got new laptop. Now you need to set it up
 
 ### Typical apps
 
-- Password manager
 - iTerm
 - Goland
 - Docker4Mac
@@ -105,7 +104,12 @@ install typescript, go LSP servers
 ### Neovim cheatsheet
 
 - `Space` is set as leader
-- `Space` + `gd` - go to definition
+  - `gd` - go to definition
+  - `e` - toggle tree view
+- `Ctrl+h` - switch to neotree
+- `Ctrl+l` - switch to code
+- `[b` - prev tab
+  - `]b` - next tab
 
 ## Movement
 
@@ -118,9 +122,7 @@ install typescript, go LSP servers
 - `w` jump to next word
   - `b` jump back to previous word
 - `f` - find character
-
   - `;` next
-
 - `/` - search
   - `n` - next hit
 

@@ -1,3 +1,6 @@
+# Password manager
+brew install --cask bitwarden
+
 # visualize keystrokes on the screen for video recordings
 brew install --cask keycastr
 
@@ -7,3 +10,4 @@ brew install maccy
 # Install DevToys for conversions
 brew install devtoys
 open /Applications/DevToys.app
+
