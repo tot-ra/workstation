@@ -69,6 +69,8 @@ ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 
 #### Mac settings
 
+- Keyboard -> Input Sources -> change language to CMD + Space
+- Keyboard -> Spotlight - change to CMD + Shift + Space
 - Keyboard -> Function keys -> Use F1.. as function keys
   (so that tmux leader key would work fine)
 
