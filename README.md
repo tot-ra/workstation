@@ -88,9 +88,16 @@ git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
 git config --global pull.rebase false
 
+# generate key for github
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
 cat ~/.ssh/id_rsa.pub
 # add key to github --> https://github.com/settings/ssh/new
+
+
+# run first time to activate
+# https://youtu.be/CPLdltN7wgE
+lazygit
+
 ```
 
 ## Neovim manual setup
