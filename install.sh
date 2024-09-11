@@ -13,12 +13,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "Installing nix package manager"
 sh <(curl -L https://nixos.org/nix/install)
 
-echo "Installing git"
-brew install git
-
-echo "Installing git large file storage extension"
-brew install git-lfs
-
+./install-git.sh
 ./install-go.sh
 ./install-cli.sh
 ./install-nvim-tmux.sh
