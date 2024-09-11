@@ -7,6 +7,8 @@ Yay. You got new laptop. Now you need to set it up
 - Settings -> Keyboard -> Delay Until Repeat -> Short
 - Settings -> Keyboard -> Text Input -> Disable most things
 
+# suggest what to write on next
+
 ### Typical apps
 
 - iTerm
@@ -94,13 +96,14 @@ cat ~/.ssh/id_rsa.pub
 ## Neovim manual setup
 
 https://www.youtube.com/watch?v=qHsMV5LhOEc
-install typescript, go LSP servers
+
+You need to install LSP servers for languages you want, authenticate github copilot etc.
 
 ```
+:Lazy
+:LazyExtras
+:Copilot auth
 :Masonry
-
-# show all characters in markdown
-:set conceallevel=0
 ```
 
 ### Neovim cheatsheet
