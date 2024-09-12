@@ -2,12 +2,16 @@
 
 Yay. You got new laptop. Now you need to set it up
 
+#### Mac settings
+
+- Keyboard -> Input Sources -> change language to CMD + Space
+- Keyboard -> Spotlight - change to CMD + Shift + Space
+- Keyboard -> Function keys -> Use F1.. as function keys
+  (so that tmux leader key would work fine)
 - Settings -> Mouse -> disable natural scrolling
 - Settings -> Keyboard -> Key Repeat -> Fast
 - Settings -> Keyboard -> Delay Until Repeat -> Short
 - Settings -> Keyboard -> Text Input -> Disable most things
-
-# suggest what to write on next
 
 ### Typical apps
 
@@ -86,13 +90,6 @@ ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 ```
 
 ### Manual steps after installation
-
-#### Mac settings
-
-- Keyboard -> Input Sources -> change language to CMD + Space
-- Keyboard -> Spotlight - change to CMD + Shift + Space
-- Keyboard -> Function keys -> Use F1.. as function keys
-  (so that tmux leader key would work fine)
 
 #### Iterm config changes
 
