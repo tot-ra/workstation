@@ -39,4 +39,3 @@ brew install redis
 
 ./install-node.sh
 ./install-python.sh
-./install-ui-apps.sh

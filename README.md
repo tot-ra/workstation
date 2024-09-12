@@ -13,36 +13,20 @@ Yay. You got new laptop. Now you need to set it up
 - Settings -> Keyboard -> Delay Until Repeat -> Short
 - Settings -> Keyboard -> Text Input -> Disable most things
 
-### Typical apps
+### Apps
 
-- iTerm
+```bash
+./install-ui-apps.sh
+``
+
 - Goland
 - Docker4Mac
 - [Postman](https://www.postman.com/downloads/)
 - [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
 - RealVNC
-- [Tailscale](https://tailscale.com/)
-- [Rectangle](https://rectangleapp.com/) to resize windows
-- [Keka](https://www.keka.io/en/) as archive manager
-- [Kap](https://getkap.co/) for video recording as alternative to Quicktime
-- [VLC](https://get.videolan.org/vlc/3.0.21/macosx/vlc-3.0.21-arm64.dmg) for playing videos
-- VSCode + plugins:
-  - Open vscode, click `Command + Shift + P` and install vscode in path to have `code` working in terminal
-
-```bash
-./install-vscode.sh
-```
-
 - Slack
 - Discord
 - Notion
-- [LM studio](https://lmstudio.ai/) as local alternative to chatgpt
-
-```
-brew install --cask lm-studio
-~/.cache/lm-studio/bin/lms bootstrap
-lms load lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF --identifier llama
-```
 
 Optional:
 
@@ -61,20 +45,25 @@ Optional:
 ### Git settings
 
 ```
+
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
 git config --global pull.rebase false
 
 # generate key for github
+
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
 cat ~/.ssh/id_rsa.pub
+
 # add key to github --> https://github.com/settings/ssh/new
 
-
 # run first time to activate
+
 # https://youtu.be/CPLdltN7wgE
+
 lazygit
-```
+
+````
 
 ### Installation
 
@@ -87,7 +76,7 @@ echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 # link nvim and tmux configs to be linked to github repo
 ln -s ~/git/mac-work/.tmux.conf ~/.tmux.conf
 ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
-```
+````
 
 ### Manual steps after installation
 
