@@ -6,6 +6,9 @@ alias cd="z"
 
 alias n="nvim"
 
+# name tmux sessions after the current directory
+alias tm='tmux new -s `basename $PWD`'
+
 alias ls="eza --long --header --icons --git --octal-permissions --no-user --no-permissions"
 
 alias sl="screen -ls"
@@ -15,3 +18,4 @@ alias cat="bat"
 alias python="$(brew --prefix python@3.11)/libexec/bin/python"
 
 source alias ai=~/ai-cli/ai
+
