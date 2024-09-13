@@ -44,6 +44,9 @@ config.keys = {
 	{ key = "Insert", mods = "SHIFT", action = act.PasteFrom("PrimarySelection") },
 	{ key = "Insert", mods = "CTRL", action = act.CopyTo("PrimarySelection") },
 
+	{ key = "+", mods = "SUPER", action = act.IncreaseFontSize },
+	{ key = "-", mods = "SUPER", action = act.DecreaseFontSize },
+
 	{
 		key = "F12",
 		action = wezterm.action.ToggleFullScreen,
