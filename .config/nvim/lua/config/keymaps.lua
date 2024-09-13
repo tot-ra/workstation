@@ -19,11 +19,15 @@ vim.keymap.set({ "v" }, "<C-a>", "nggVGy", { desc = "Select all an copy", remap 
 -- F4 to do global search, same as Mac search icon
 vim.keymap.set({ "i", "n" }, "<F4>", "<esc><leader>sg", { desc = "Search in workspace", remap = true })
 
--- moving lines
+-- Moving line one at a time
 vim.keymap.set({ "i", "n" }, "<CS-Down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
 vim.keymap.set({ "i", "n" }, "<CS-Up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 
--- selecting
+-- Visual move down/up command, counts number of selected lines
+-- this does depend on terminal (wizterm) to not intercept ctrl+shift+up/down
+vim.keymap.set({ "v" }, "<CS-Down>", ":m '>+1<CR>gv=gv", { desc = "Visual Move Down", remap = true })
+vim.keymap.set({ "v" }, "<CS-Up>", ":m '<-2<CR>gv=gv", { desc = "Visual Move Up", remap = true })
+
 vim.keymap.set("i", "<S-Up>", "<esc>v<Up>", { desc = "Select Up" })
 vim.keymap.set("i", "<S-Down>", "<esc>v<Down>", { desc = "Select Down" })
 vim.keymap.set("i", "<S-Left>", "<esc>v<Left>", { desc = "Select Left" })

@@ -20,9 +20,10 @@ return {
       "typescript",
       "vim",
       "yaml",
-
+      "go",
       "tsx",
-      "typescript",
+      "c",
+      "rust",
     })
   end,
 }

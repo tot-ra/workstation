@@ -6,12 +6,15 @@ Yay. You got new laptop. Now you need to set it up
 
 - Keyboard -> Input Sources -> change language to CMD + Space
 - Keyboard -> Spotlight - change to CMD + Shift + Space
-- Keyboard -> Function keys -> Use F1.. as function keys
-  (so that tmux leader key would work fine)
-- Settings -> Mouse -> disable natural scrolling
-- Settings -> Keyboard -> Key Repeat -> Fast
-- Settings -> Keyboard -> Delay Until Repeat -> Short
-- Settings -> Keyboard -> Text Input -> Disable most things
+- Keyboard -> Function keys -> Turn on "Use F1.. as function keys"
+- Keyboard -> Mission control -> turn off `Mission Control` and `Application windows`, `Show Desktop`
+  - change `move left/right a space` to use CMD instead of CTRL
+    (so that tmux leader key would work fine)
+- Mouse -> disable natural scrolling
+- Keyboard -> Key Repeat -> Fast
+- Keyboard -> Delay Until Repeat -> Short
+- Keyboard -> Text Input -> Disable most things
+- Keyboard -> Accessibility -> Disable VoiceOver
 
 ### Apps
 
@@ -55,15 +58,9 @@ git config --global pull.rebase false
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
 cat ~/.ssh/id_rsa.pub
 
-# add key to github --> https://github.com/settings/ssh/new
-
-# run first time to activate
-
-# https://youtu.be/CPLdltN7wgE
-
-lazygit
-
-````
+- add key to github --> https://github.com/settings/ssh/new
+- run `lazygit` first time to activate
+- see https://youtu.be/CPLdltN7wgE for more info
 
 ### Installation
 
@@ -76,7 +73,7 @@ echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 # link nvim and tmux configs to be linked to github repo
 ln -s ~/git/mac-work/.tmux.conf ~/.tmux.conf
 ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
-````
+```
 
 ### Manual steps after installation
 
