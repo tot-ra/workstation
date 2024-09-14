@@ -81,15 +81,19 @@ ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 
 ## Keyboard shortcuts
 
+### Wezterm
+
+- `F12` - toggle fullscreen
+
 ### Neovim
 
 - `Space` is set as leader
   - `gd` - go to definition
   - `e` - toggle tree view
-- `Ctrl+h` - switch to neotree
-- `Ctrl+l` - switch to code
-- `[b` - prev tab
-  - `]b` - next tab
+- `Tab` - accept completion
+- `Alt-left/right` - switch between tabs
+- `Alt-up` - close tab
+- `Alt-down` - pin tab
 
 #### Movement
 
@@ -112,6 +116,20 @@ ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 - `za` - Toggle between closing and opening the fold under the cursor.
 - `zR` - Open all folds in the current buffer.
 - `zM` - Close all folds in the current buffer.
+
+#### Commenting
+
+Instead of using plugins we use native vim support:
+
+- `Ctrl+V` enter visual block mode
+- Select lines
+- `Shift+I` enter insert mode
+- type `//` or other comment symbols
+- `Esc` to apply changes
+
+To uncomment:
+
+- do the same, but instead of `//`, use `x` to delete characters
 
 #### Insert mode
 
@@ -164,6 +182,5 @@ Leader (`F3`) and:
 - `"` - split window to panes horizontally
 - `%` - split window to panes vertically
 - `z` - zoom pane (toggle)
-- `(arrows)` - switch to pane
 - `!` - move pane to own window
 - `o` - switch session (interactive with [plugin](https://github.com/omerxx/tmux-sessionx))
