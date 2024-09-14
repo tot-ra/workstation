@@ -23,7 +23,6 @@ return {
       "ruff",
       "shellcheck",
       "shfmt",
-      "sqls",
       "stylua",
       "typescript-language-server",
     },
