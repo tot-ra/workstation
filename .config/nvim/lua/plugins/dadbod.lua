@@ -15,6 +15,17 @@ return {
       -- Your DBUI configuration
       vim.g.db_ui_use_nerd_fonts = 1
     end,
+
+    keys = {
+      {
+        "<F11>",
+        mode = { "n" },
+        ":DBUIToggle<CR>",
+        desc = "Database UI",
+      },
+
+      --{ "n", "<leader>du", ":DBUIToggle<CR>", { noremap = true, silent = true } },
+    },
   },
 
   {
