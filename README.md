@@ -72,18 +72,7 @@ ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 
 ### Manual steps after installation
 
-#### Iterm config changes
-
-- Enable clipboard access in General -> Selection -> Applications ... may access clipboard
-- Pointer -> remove "Open Context Menu" on right mouse click. This is needed for right-click to work in neovim and tmux
-
-```bash
-set -g mouse on
-
-
-```
-
-## Neovim manual setup
+#### Neovim manual setup
 
 https://www.youtube.com/watch?v=qHsMV5LhOEc
 
@@ -96,7 +85,9 @@ You need to install LSP servers for languages you want, authenticate github copi
 :Mason
 ```
 
-### Neovim cheatsheet
+## Keyboard shortcuts
+
+### Neovim
 
 - `Space` is set as leader
   - `gd` - go to definition
@@ -106,7 +97,7 @@ You need to install LSP servers for languages you want, authenticate github copi
 - `[b` - prev tab
   - `]b` - next tab
 
-## Movement
+#### Movement
 
 - `hjkl` - movement up/down/left/right
 - `gg` - go to top of the file
@@ -122,20 +113,20 @@ You need to install LSP servers for languages you want, authenticate github copi
   - `n` - next hit
 - `f(` - jump to next bracket
 
-### Code folding
+#### Code folding
 
 - `za` - Toggle between closing and opening the fold under the cursor.
 - `zR` - Open all folds in the current buffer.
 - `zM` - Close all folds in the current buffer.
 
-### Insert mode
+#### Insert mode
 
 - `I` - switch to insert mode + go to beginning of the line
 - `A` - switch to insert mode + go to end of the line
 - `i` - switch to insert mode
 - `o` - switch to insert mode + add new line after current one
 
-### Visual mode
+#### Visual mode
 
 - `y` - copy (yield)
 - `p` - paste
@@ -144,7 +135,7 @@ You need to install LSP servers for languages you want, authenticate github copi
 - `u` - undo
 - `w` - select word
 
-### TMux cheatsheet
+### TMux
 
 - `F3` is set as leader shortcut
 
@@ -158,7 +149,7 @@ Leader (`F3`) and:
 - `$` - rename session
 - `d` - detach from session
 
-## Sessions
+#### Sessions
 
 - `tmux ls` - list sessions
 - `tmux new -s my-session` - create session
