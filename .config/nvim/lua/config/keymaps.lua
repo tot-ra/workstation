@@ -12,6 +12,7 @@ local opts = { remap = false, silent = true }
 
 -- avoid loss of changes on quick exit
 vim.keymap.set("n", "Q", "<nop>", opts)
+vim.keymap.set("n", "<F1>", "<nop>", opts)
 
 -- Ctrl-s to save file
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
