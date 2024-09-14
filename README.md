@@ -98,7 +98,7 @@ You need to install LSP servers for languages you want, authenticate github copi
 :Lazy
 :LazyExtras
 :Copilot auth
-:Masonry
+:Mason
 ```
 
 ### Neovim cheatsheet
