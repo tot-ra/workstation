@@ -52,6 +52,13 @@ config.keys = {
 		action = wezterm.action.ToggleFullScreen,
 	},
 }
+config.default_cursor_style = "BlinkingBar"
+config.cursor_blink_rate = 300
+config.cursor_thickness = "250%"
+config.max_fps = 75
+config.animation_fps = 75
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
 
 config.window_frame = {
 	-- The font used in the tab bar.
