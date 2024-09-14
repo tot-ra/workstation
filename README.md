@@ -42,20 +42,15 @@ Others need manual installation:
 
 ### Git settings
 
-````
-
+```bash
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
 git config --global pull.rebase false
 
 # generate key for github
-
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
 cat ~/.ssh/id_rsa.pub
-
-- add key to github --> https://github.com/settings/ssh/new
-- run `lazygit` first time to activate
-- see https://youtu.be/CPLdltN7wgE for more info
+```
 
 ### Installation
 
@@ -68,15 +63,14 @@ echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 # link nvim and tmux configs to be linked to github repo
 ln -s ~/git/mac-work/.tmux.conf ~/.tmux.conf
 ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
-````
+
+# now add this key to github --> https://github.com/settings/ssh/new
+```
 
 ### Manual steps after installation
 
-#### Neovim manual setup
-
-https://www.youtube.com/watch?v=qHsMV5LhOEc
-
-You need to install LSP servers for languages you want, authenticate github copilot etc.
+- run `lazygit` first time to activate
+- run nvim and from cmd mode run (where you'll need to install plugins):
 
 ```
 :Lazy
