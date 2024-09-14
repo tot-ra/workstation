@@ -24,7 +24,7 @@ return {
       "shellcheck",
       "shfmt",
       "stylua",
-      "typescript-language-server",
+      --      "typescript-language-server",
     },
   },
 }

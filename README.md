@@ -160,6 +160,7 @@ Leader (`F3`) and:
 
 #### Panes
 
+- `Ctrl+arrows` - moves between panes (including within nvim)
 - `"` - split window to panes horizontally
 - `%` - split window to panes vertically
 - `z` - zoom pane (toggle)
