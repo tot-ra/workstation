@@ -18,9 +18,9 @@ Yay. You got new laptop. Now you need to set it up
 
 ### Apps
 
-```bash
-./install-ui-apps.sh
-``
+To install, run: `./install-ui-apps.sh`
+
+Others need manual installation:
 
 - Goland
 - Docker4Mac
@@ -30,14 +30,9 @@ Yay. You got new laptop. Now you need to set it up
 - Slack
 - Discord
 - Notion
-
-Optional:
-
 - [GrandPerspective](https://grandperspectiv.sourceforge.net/) to see HDD usage
 - [Monocle](https://monokle.io/download) to access k8s logs
 - Microsoft TODO
-- Davinci resolve
-- Arduino IDE
 
 ### Fonts
 
@@ -47,7 +42,7 @@ Optional:
 
 ### Git settings
 
-```
+````
 
 git config --global user.name "Artjom Kurapov"
 git config --global user.email "artkurapov@gmail.com"
@@ -73,7 +68,7 @@ echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
 # link nvim and tmux configs to be linked to github repo
 ln -s ~/git/mac-work/.tmux.conf ~/.tmux.conf
 ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
-```
+````
 
 ### Manual steps after installation
 
