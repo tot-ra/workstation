@@ -11,10 +11,16 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+      border = "single", -- set border to single
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
       },
+    },
+    keys = { -- load the plugin only when using it's keybinding:
+      -- note that `u` is still undo
+      -- note that Ctrl-r is redo
+      { "<C-e>", "<cmd>lua vim.lsp.rename()<cr>" },
     },
   },
 
@@ -23,7 +29,7 @@ return {
   --  { import = "lazyvim.plugins.extras.lang.typescript" },
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
-  { import = "lazyvim.plugins.extras.lang.json" },
+  --  { import = "lazyvim.plugins.extras.lang.json" },
 
   -- add any tools you want to have installed below
 }

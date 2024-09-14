@@ -18,6 +18,9 @@ sh <(curl -L https://nixos.org/nix/install)
 ./install-cli.sh
 ./install-nvim-tmux.sh
 
+echo "Installing rust for nvim -> mason -> cmake"
+brew install rust
+
 echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >>~/.zshrc
 source ~/.zshrc
