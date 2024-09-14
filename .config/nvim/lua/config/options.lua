@@ -8,4 +8,4 @@ vim.opt.encoding = "utf-8"
 vim.opt.scrolloff = 10
 
 vim.opt.conceallevel = 0
-vim.g.tokyonight_colors = { border = "orange" }
+-- vim.g.tokyonight_colors = { border = "orange" }
