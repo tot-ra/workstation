@@ -125,6 +125,7 @@ You need to install LSP servers for languages you want, authenticate github copi
   - `;` next
 - `/` - search
   - `n` - next hit
+- `f(` - jump to next bracket
 
 ### Code folding
 
@@ -134,6 +135,8 @@ You need to install LSP servers for languages you want, authenticate github copi
 
 ### Insert mode
 
+- `I` - switch to insert mode + go to beginning of the line
+- `A` - switch to insert mode + go to end of the line
 - `i` - switch to insert mode
 - `o` - switch to insert mode + add new line after current one
 

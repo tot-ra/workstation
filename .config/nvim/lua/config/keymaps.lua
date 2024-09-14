@@ -3,6 +3,11 @@
 -- Add any additional keymaps here
 --
 
+-- Navigation
+vim.keymap.set("n", "<A-Left>", ":tabprev<CR>")
+vim.keymap.set("n", "<A-Right>", ":tabnext<CR>")
+vim.keymap.set("n", "<A-Down>", ":tabnew<CR>")
+
 -- Ctrl-s to save file
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
