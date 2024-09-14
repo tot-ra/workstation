@@ -8,6 +8,11 @@ vim.keymap.set("n", "<A-Left>", ":tabprev<CR>")
 vim.keymap.set("n", "<A-Right>", ":tabnext<CR>")
 vim.keymap.set("n", "<A-Down>", ":tabnew<CR>")
 
+local opts = { remap = false, silent = true }
+
+-- avoid loss of changes on quick exit
+vim.keymap.set("n", "Q", "<nop>", opts)
+
 -- Ctrl-s to save file
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
