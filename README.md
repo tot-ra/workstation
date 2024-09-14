@@ -126,9 +126,16 @@ You need to install LSP servers for languages you want, authenticate github copi
 - `/` - search
   - `n` - next hit
 
+### Code folding
+
+- `za` - Toggle between closing and opening the fold under the cursor.
+- `zR` - Open all folds in the current buffer.
+- `zM` - Close all folds in the current buffer.
+
 ### Insert mode
 
-- `o` - en
+- `i` - switch to insert mode
+- `o` - switch to insert mode + add new line after current one
 
 ### Visual mode
 
