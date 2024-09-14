@@ -81,9 +81,9 @@ ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 
 ## Keyboard shortcuts
 
-### Wezterm
-
-- `F12` - toggle fullscreen
+- `F2` - search/replace (nvim)
+- `F3` - tmux
+- `F12` - toggle fullscreen (wezterm)
 
 ### Neovim
 
@@ -148,8 +148,6 @@ To uncomment:
 - `w` - select word
 
 ### TMux
-
-- `F3` is set as leader shortcut
 
 Leader (`F3`) and:
 

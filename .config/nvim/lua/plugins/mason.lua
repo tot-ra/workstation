@@ -2,6 +2,9 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
+      ui = {
+        border = "rounded",
+      },
       ensure_installed = {
         "docker-compose-language-service",
         "eslint-lsp",
