@@ -81,8 +81,9 @@ ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
 
 ## Keyboard shortcuts
 
+- `F1` - tmux
 - `F2` - search/replace (nvim)
-- `F3` - tmux
+- `F11` - toggle DB UI
 - `F12` - toggle fullscreen (wezterm)
 
 ### Neovim
@@ -149,7 +150,7 @@ To uncomment:
 
 ### TMux
 
-Leader (`F3`) and:
+Leader (`F1`) and:
 
 - `?` - show key bindings
 - `t` - select session
