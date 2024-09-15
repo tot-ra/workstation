@@ -27,6 +27,15 @@ brew install --cask kap
 # VLC video player
 brew install --cask vlc
 
+# Corporate messenger
+brew install --cask slack
+
+# Documenting and note taking
+brew install --cask notion
+
+# Music player
+brew install --cask spotify
+
 # Rectangle window manager
 brew install --cask rectangle
 
