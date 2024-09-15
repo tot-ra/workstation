@@ -25,8 +25,8 @@ config.use_ime = true -- yes emojis 🎉
 config.use_dead_keys = false
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 15
+config.window_background_opacity = 0.93
+config.macos_window_background_blur = 30
 config.audible_bell = "Disabled"
 config.check_for_updates = false
 
