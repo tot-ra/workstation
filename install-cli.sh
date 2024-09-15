@@ -61,6 +61,9 @@ brew install tldr
 echo "Install GNU parallel, useful for parallel executions, ex: parallel --jobs 3 --delay 2 --timeout 5 --shuf --progress echo {1} ::: 1 2 3"
 brew install parallel
 
+echo "Installing yq to parse yaml files, similar to jq"
+brew install yq
+
 # Install ai CLI
 git clone https://github.com/tot-ra/ai-cli.git ~/ai-cli
 cd ai-cli && go build ai.go
