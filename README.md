@@ -170,7 +170,8 @@ Leader (`F1`) and:
 #### Windows
 
 - `c` - create window
-- `n` - next window
+- `Ctrl+Shift-right` - next window
+- `Ctrl+Shift-left` - previous window
 - `1` - switch to window 1
 - `,` - rename window
 - `.` - move window
