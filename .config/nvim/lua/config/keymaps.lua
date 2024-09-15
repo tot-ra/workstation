@@ -4,6 +4,11 @@
 --
 
 -- Navigation
+-- going back and forth in the jump list
+vim.keymap.set("n", "<C-A-Left>", "<C-O>")
+vim.keymap.set("n", "<C-A-Right>", "<C-I>")
+
+-- moving between tabs
 vim.keymap.set("n", "<A-Left>", ":tabprev<CR>")
 vim.keymap.set("n", "<A-Right>", ":tabnext<CR>")
 vim.keymap.set("n", "<A-Down>", ":tabnew<CR>")
