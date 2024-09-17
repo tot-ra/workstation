@@ -25,24 +25,8 @@ echo "Mount mount.sh"
 echo "source ~/git/mac-work/mount.sh" >>~/.zshrc
 source ~/.zshrc
 
-## Docker and kubernetes
-echo "Install kubectl"
-brew install kubectl
-
-echo "Install k9s"
-brew install derailed/k9s/k9s
-export KUBE_EDITOR=nvim
-
-echo "Installing dry"
-curl -sSf https://moncho.github.io/dry/dryup.sh | sudo sh
-sudo chmod 755 /usr/local/bin/dry
-
-echo "Installing redis"
-brew install redis
-
-echo "Installing mysql client for VIM to connect to DBs. Use 8.0 for native password support"
-brew install mysql-client@8.0
-brew link --overwrite mysql-client@8.0 --force
-
+./install-db.sh
+./install-docker-k8s.sh
+./install-media.sh
 ./install-node.sh
 ./install-python.sh
