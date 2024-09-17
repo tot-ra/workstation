@@ -18,7 +18,7 @@ return {
       post_hook = nil,
     })
 
-    vim.keymap.set("n", "<C>rr", function()
+    vim.keymap.set("n", "<F2>", function()
       return ":IncRename " .. vim.fn.expand("<cword>")
     end, { expr = true })
   end,

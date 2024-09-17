@@ -6,7 +6,7 @@ return {
 
   keys = {
     {
-      "<F2>",
+      "<F9>",
       mode = { "n" },
       function()
         require("spectre").open_visual({ select_word = true })
@@ -14,7 +14,7 @@ return {
       desc = "Search in current word",
     },
     {
-      "<F2>",
+      "<F9>",
       mode = { "v" },
       function()
         require("spectre").open_visual()
