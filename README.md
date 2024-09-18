@@ -87,6 +87,43 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 - `F11` - toggle DB UI
 - `F12` - toggle fullscreen (wezterm)
 
+### TMux
+
+Leader (`F1`) and:
+
+- `?` - show key bindings
+- `t` - select session
+- `r` - reload config
+- `I` - install plugins
+- `:` - command mode
+- `$` - rename session
+- `d` - detach from session
+
+#### Sessions
+
+- `tmux ls` - list sessions
+- `tmux new -s my-session` - create session
+- `tmux a` - attach to new session
+- `tmux a -t my-session` - attach to session by name
+
+#### Windows
+
+- `c` - create window
+- `Ctrl+Shift-right` - next window
+- `Ctrl+Shift-left` - previous window
+- `1` - switch to window 1
+- `,` - rename window
+- `.` - move window
+
+#### Panes
+
+- `Ctrl+arrows` - moves between panes (including within nvim)
+- `"` - split window to panes horizontally
+- `%` - split window to panes vertically
+- `z` - zoom pane (toggle)
+- `!` - move pane to own window
+- `o` - switch session (interactive with [plugin](https://github.com/omerxx/tmux-sessionx))
+
 ### Neovim
 
 - `Space` is set as leader
@@ -149,39 +186,6 @@ To uncomment:
 - `u` - undo
 - `w` - select word
 
-### TMux
+### Git
 
-Leader (`F1`) and:
-
-- `?` - show key bindings
-- `t` - select session
-- `r` - reload config
-- `I` - install plugins
-- `:` - command mode
-- `$` - rename session
-- `d` - detach from session
-
-#### Sessions
-
-- `tmux ls` - list sessions
-- `tmux new -s my-session` - create session
-- `tmux a` - attach to new session
-- `tmux a -t my-session` - attach to session by name
-
-#### Windows
-
-- `c` - create window
-- `Ctrl+Shift-right` - next window
-- `Ctrl+Shift-left` - previous window
-- `1` - switch to window 1
-- `,` - rename window
-- `.` - move window
-
-#### Panes
-
-- `Ctrl+arrows` - moves between panes (including within nvim)
-- `"` - split window to panes horizontally
-- `%` - split window to panes vertically
-- `z` - zoom pane (toggle)
-- `!` - move pane to own window
-- `o` - switch session (interactive with [plugin](https://github.com/omerxx/tmux-sessionx))
+- `Space gg` - toggle lazygit
