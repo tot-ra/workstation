@@ -9,9 +9,14 @@ return {
         "docker-compose-language-service",
         "eslint-lsp",
         "flake8",
+
+        "gomodifytags",
+        "impl",
         "gofumpt",
         "goimports",
         "gopls",
+        "delve",
+
         "hadolint",
         "helm-ls",
         "json-lsp",
