@@ -22,7 +22,7 @@ echo "Installing rust for nvim -> mason -> cmake"
 brew install rust
 
 echo "Mount mount.sh"
-echo "source ~/git/mac-work/mount.sh" >>~/.zshrc
+echo "source ~/git/workstation/mount.sh" >>~/.zshrc
 source ~/.zshrc
 
 ./install-db.sh

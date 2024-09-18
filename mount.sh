@@ -14,10 +14,9 @@ bindkey '^[[B' history-search-forward
 # dont warn about echoing on new terminal
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-source ~/git/mac-work/.aliases
+source ~/git/workstation/.aliases
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-

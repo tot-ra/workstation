@@ -1,6 +1,6 @@
 # Wezterm
 brew install --cask wezterm
-ln -s ~/git/mac-work/.config/wezterm ~/.config/wezterm
+ln -s ~/git/workstation/.config/wezterm ~/.config/wezterm
 
 # Password manager
 brew install --cask bitwarden

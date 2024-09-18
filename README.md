@@ -57,13 +57,13 @@ cat ~/.ssh/id_rsa.pub
 
 ```bash
 chmod +x install.sh
-git clone git@github.com:tot-ra/mac-work.git ~/git/mac-work
-~/git/mac-work/install.sh
-echo "source ~/git/mac-work/mount.sh" >> ~/.zshrc
+git clone git@github.com:tot-ra/workstation.git ~/git/workstation
+~/git/workstation/install.sh
+echo "source ~/git/workstation/mount.sh" >> ~/.zshrc
 
 # link nvim and tmux configs to be linked to github repo
-ln -s ~/git/mac-work/.tmux.conf ~/.tmux.conf
-ln -s ~/git/mac-work/.config/nvim ~/.config/nvim
+ln -s ~/git/workstation/.tmux.conf ~/.tmux.conf
+ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 
 # now add this key to github --> https://github.com/settings/ssh/new
 ```
