@@ -13,7 +13,8 @@ pyenv install --skip-existing 3.11
 pyenv global 3.11
 pyenv global
 
-pip install --upgrade pip
+python -m pip install --upgrade pip
+
 pip install virtualenv
 
 . ~/virtualenv/v1/bin/activate
