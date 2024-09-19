@@ -83,8 +83,6 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 ## Keyboard shortcuts
 
 - `F1` - tmux
-- `F2` - search/replace (nvim)
-- `F11` - toggle DB UI
 - `F12` - toggle fullscreen (wezterm)
 
 ### TMux
@@ -136,9 +134,9 @@ Leader (`F1`) and:
 
 #### Movement
 
-- `hjkl` - movement up/down/left/right
+- `Ctrl+z` - jump to characters (flash plugin)
 - `gg` - go to top of the file
-  - `S+g` - go to end of the file
+  - `G` - go to end of the file
 - `20G` - go to line 20
 - `5j` - go up 5 lines
   - `5k` - go down 5 lines
@@ -172,6 +170,7 @@ To uncomment:
 
 #### Insert mode
 
+- `F2` - search/replace (nvim) with LSP
 - `I` - switch to insert mode + go to beginning of the line
 - `A` - switch to insert mode + go to end of the line
 - `i` - switch to insert mode
@@ -185,6 +184,10 @@ To uncomment:
 - `dd` - delete line
 - `u` - undo
 - `w` - select word
+
+### Database UI
+
+- `F11` - toggle DB UI
 
 ### Git
 

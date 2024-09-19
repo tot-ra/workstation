@@ -95,3 +95,19 @@ require("image").setup({
   tmux_show_only_in_active_window = false, -- auto show/hide images in the correct Tmux window (needs visual-activity off)
   hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp", "*.avif" }, -- render image files as images when opened
 })
+
+local config = { -- Specify configuration
+  go_test_args = {
+    "-v",
+    "-race",
+    "-count=1",
+    "-coverprofile=" .. vim.fn.getcwd() .. "/coverage.out",
+  },
+}
+require("neotest").setup({
+  adapters = {
+    require("neotest-golang")(config), -- Apply configuration
+  },
+})
+
+require("neotest.logging"):set_level(vim.log.levels.DEBUG)

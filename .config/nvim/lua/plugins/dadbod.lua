@@ -23,8 +23,12 @@ return {
         ":DBUIToggle<CR>",
         desc = "Database UI",
       },
-
-      --{ "n", "<leader>du", ":DBUIToggle<CR>", { noremap = true, silent = true } },
+      {
+        "<leader>h",
+        mode = { "n" },
+        ":DBUIToggle<CR>",
+        desc = "Database UI",
+      },
     },
   },
 
