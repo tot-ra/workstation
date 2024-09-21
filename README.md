@@ -80,7 +80,7 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 :Mason
 ```
 
-## Keyboard shortcuts
+## Custom keyboard shortcuts
 
 - `F1` - tmux
 - `F12` - toggle fullscreen (wezterm)
@@ -106,7 +106,9 @@ Leader (`F1`) and:
 
 #### Windows
 
-- `c` - create window
+- `F1` + `+` - create window
+- `F1` + `-` - split window horizontally
+- `F1` + `|` - split window vertically
 - `Ctrl+Shift-right` - next window
 - `Ctrl+Shift-left` - previous window
 - `1` - switch to window 1
@@ -124,6 +126,9 @@ Leader (`F1`) and:
 
 ### Neovim
 
+- `F3` - find string
+- `F4` - find file
+- `F11` - toggle DB UI
 - `Space` is set as leader
   - `gd` - go to definition
   - `e` - toggle tree view
@@ -156,17 +161,7 @@ Leader (`F1`) and:
 
 #### Commenting
 
-Instead of using plugins we use native vim support:
-
-- `Ctrl+V` enter visual block mode
-- Select lines
-- `Shift+I` enter insert mode
-- type `//` or other comment symbols
-- `Esc` to apply changes
-
-To uncomment:
-
-- do the same, but instead of `//`, use `x` to delete characters
+- `gcc` - comment line
 
 #### Insert mode
 
@@ -184,10 +179,6 @@ To uncomment:
 - `dd` - delete line
 - `u` - undo
 - `w` - select word
-
-### Database UI
-
-- `F11` - toggle DB UI
 
 ### Git
 
