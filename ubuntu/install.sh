@@ -44,27 +44,12 @@ echo "setting zsh to be default"
 chsh -s /usr/bin/zsh
 zsh --version
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 echo "Installing nerd fonts from https://www.nerdfonts.com/font-downloads"
 font_url='https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip'
 font_name=${font_url##*/}; 
 wget ${font_url}
 unzip ${font_name} -d ~/.fonts
 fc-cache -fv
-
-echo "Restarting zsh"
-exec zsh
-sudo chsh -s "$(command -v zsh)" "${USER}"
-
-echo "Installing powerlevel10k zsh theme"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo "ZSH_THEME='powerlevel10k/powerlevel10k'" >> ~/.zshrc
-
-echo "Install zsh-autosuggestions"
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-echo "plugins=(git zsh-autosuggestions zsh-syntax-highlighting)" | sed '1,/plugins=/ s/.*/&\n\n/' >> ~/.zshrc
 
 echo "Installing tmux"
 sudo apt install tmux -y
@@ -111,3 +96,20 @@ nvm install 20
 
 echo "Installing bat"
 sudo apt install bat -y
+
+
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Restarting zsh"
+exec zsh
+sudo chsh -s "$(command -v zsh)" "${USER}"
+
+echo "Installing powerlevel10k zsh theme"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+echo "ZSH_THEME='powerlevel10k/powerlevel10k'" >> ~/.zshrc
+
+echo "Install zsh-autosuggestions"
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+echo "plugins=(git zsh-autosuggestions zsh-syntax-highlighting)" | sed '1,/plugins=/ s/.*/&\n\n/' >> ~/.zshrc
