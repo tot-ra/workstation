@@ -4,3 +4,14 @@ font_name=${font_url##*/};
 wget ${font_url}
 unzip ${font_name} -d ~/.fonts
 fc-cache -fv
+
+
+echo "Installing tmux"
+sudo apt install tmux -y
+
+echo "Installing latest neovim"
+sudo add-apt-repository ppa:neovim-ppa/stable -y
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update
+sudo apt install neovim -y
+apt-cache policy neovim
