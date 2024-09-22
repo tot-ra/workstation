@@ -1,6 +1,8 @@
-echo "Installing bat"
+echo "Installing bat, a better cat"
 sudo apt install bat -y
 
+echo "Install zoxide, a better cd"
+sudo apt install zoxide -y
 
 echo "Installing eza, an alternative to ls"
 sudo apt install -y gpg
@@ -10,7 +12,6 @@ echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 sudo apt update
 sudo apt install -y eza
-
 
 echo "Installing zsh"
 sudo apt install zsh
@@ -27,9 +28,9 @@ sudo chsh -s "$(command -v zsh)" "${USER}"
 
 echo "Installing powerlevel10k zsh theme"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo "ZSH_THEME='powerlevel10k/powerlevel10k'" >> ~/.zshrc
+echo "ZSH_THEME='powerlevel10k/powerlevel10k'" >>~/.zshrc
 
 echo "Install zsh-autosuggestions"
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-echo "plugins=(git zsh-autosuggestions zsh-syntax-highlighting)" | sed '1,/plugins=/ s/.*/&\n\n/' >> ~/.zshrc
+echo "plugins=(git zsh-autosuggestions zsh-syntax-highlighting)" | sed '1,/plugins=/ s/.*/&\n\n/' >>~/.zshrc
