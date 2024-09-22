@@ -6,7 +6,7 @@ sudo apt upgrade
 
 
 echo "Installing git large file storage extension"
-sudo apt-get install git-lfs
+sudo apt-get install git-lfs -y
 
 
 echo "Installing nix package manager"
