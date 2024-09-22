@@ -14,10 +14,17 @@ sh <(curl -L https://nixos.org/nix/install) --daemon
 
 # Golang
 echo "Installing go"
-sudo apt install golang-go
-
+sudo apt install golang-go -y
 
 ## Docker and kubernetes
+echo "Install docker"
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+apt-cache policy docker-ce
+sudo apt install docker-ce -y
+sudo systemctl status docker
 sudo usermod -aG docker ${USER}
 
 echo "Install docker-compose"
@@ -50,6 +57,16 @@ font_name=${font_url##*/};
 wget ${font_url}
 unzip ${font_name} -d ~/.fonts
 fc-cache -fv
+
+
+echo "Installing wezterm"
+curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+sudo apt update
+sudo apt install wezterm
+
+
+
 
 echo "Installing tmux"
 sudo apt install tmux -y
