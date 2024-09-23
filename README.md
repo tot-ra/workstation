@@ -69,6 +69,7 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 ```
 
 ### Manual steps after installation
+
 - run `tmux` and run `F1 + I` to install plugins
 - run `lazygit` first time to activate
 - run nvim and from cmd mode run (where you'll need to install plugins):
@@ -89,6 +90,7 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 
 Leader (`F1`) and:
 
+- `*` - clears history and terminal
 - `?` - show key bindings
 - `t` - select session
 - `r` - reload config
@@ -111,7 +113,6 @@ Leader (`F1`) and:
 - `F1` + `|` - split window vertically
 - `Ctrl+Shift-right` - next window
 - `Ctrl+Shift-left` - previous window
-- `1` - switch to window 1
 - `,` - rename window
 - `.` - move window
 
