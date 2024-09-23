@@ -41,6 +41,12 @@ config.keys = {
 		action = wezterm.action.CopyTo("Clipboard"),
 	},
 
+	{
+		key = "f",
+		mods = "SUPER",
+		action = act.Search({ CaseSensitiveString = "" }),
+	},
+
 	{ key = "Insert", mods = "SHIFT", action = act.PasteFrom("PrimarySelection") },
 	{ key = "Insert", mods = "CTRL", action = act.CopyTo("PrimarySelection") },
 
