@@ -5,7 +5,7 @@ return {
   ---@type Flash.Config
   -- stylua: ignore
   keys = {
-    { "z", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+    { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
 --    { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
 --    { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
 --    { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
@@ -193,7 +193,7 @@ return {
         -- If you rather use another key, you can map them
         -- to something else, e.g., { [";"] = "L", [","] = H }
         keys = {
-          "z",
+          "s",
           --"f", "F", "t", "T", ";", ","
         },
         ---@alias Flash.CharActions table<string, "next" | "prev" | "right" | "left">

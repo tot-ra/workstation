@@ -140,7 +140,7 @@ Leader (`F1`) and:
 
 #### Movement
 
-- `Ctrl+z` - jump to characters (flash plugin)
+- `s` - jump to characters (flash plugin)
 - `gg` - go to top of the file
   - `G` - go to end of the file
 - `20G` - go to line 20
