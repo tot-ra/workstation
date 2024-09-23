@@ -90,9 +90,9 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 
 Leader (`F1`) and:
 
+- `w` - choose window
 - `*` - clears history and terminal
 - `?` - show key bindings
-- `t` - select session
 - `r` - reload config
 - `I` - install plugins
 - `:` - command mode
