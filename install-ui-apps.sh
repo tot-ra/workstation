@@ -32,6 +32,7 @@ brew install --cask slack
 
 # Documenting and note taking
 brew install --cask notion
+brew install --cask obsidian
 
 # Music player
 brew install --cask spotify
@@ -48,5 +49,4 @@ brew install --cask lm-studio
 ~/.cache/lm-studio/bin/lms bootstrap
 lms load lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF --identifier llama
 
-# JetBrains GoLand
 brew install --cask goland
