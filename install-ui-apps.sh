@@ -47,3 +47,6 @@ open /Applications/DevToys.app
 brew install --cask lm-studio
 ~/.cache/lm-studio/bin/lms bootstrap
 lms load lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF --identifier llama
+
+# JetBrains GoLand
+brew install --cask goland
