@@ -99,6 +99,11 @@ Leader (<kbd>F1</kbd>) and:
 - <kbd>$</kbd> - rename session
 - <kbd>d</kbd> - detach from session
 
+- <kbd>[</kbd> - enter copy mode
+  - <kbd>Space</kbd> - start selection
+  - <kbd>Enter</kbd> - copy selection
+  - <kbd>]</kbd> - paste selection
+
 #### Sessions
 
 - `tmux ls` - list sessions
