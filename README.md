@@ -142,6 +142,8 @@ Leader (<kbd>F1</kbd>) and:
 - <kbd>Alt</kbd> <kbd>left/right</kbd> - switch between tabs
 - <kbd>Alt</kbd> <kbd></kbd>up</kbd> - close tab
 - <kbd>Alt</kbd> <kbd>down</kbd> - pin tab
+- <kbd>Ctrl</kbd> <kbd>I</kbd> - go to previous location
+  - <kbd>Ctrl</kbd> <kbd>O</kbd> - go to next location
 
 #### Movement
 
