@@ -31,7 +31,6 @@ Others need manual installation:
 - [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
 - RealVNC
 - Discord
-- [GrandPerspective](https://grandperspectiv.sourceforge.net/) to see HDD usage
 - [Monocle](https://monokle.io/download) to access k8s logs
 - Microsoft TODO
 

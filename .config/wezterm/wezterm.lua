@@ -2,7 +2,6 @@ local wezterm = require("wezterm")
 local config = {}
 local act = wezterm.action
 
-
 config.color_scheme = "Dark Pastel"
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true

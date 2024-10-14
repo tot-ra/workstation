@@ -40,6 +40,9 @@ brew install --cask spotify
 # Rectangle window manager
 brew install --cask rectangle
 
+# GrandPerspective disk usage visualization
+brew install --cask grandperspective
+
 # Install DevToys for conversions
 brew install devtoys
 open /Applications/DevToys.app
