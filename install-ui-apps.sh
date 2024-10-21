@@ -14,6 +14,11 @@ brew install maccy
 # Tailscale
 brew install tailscale
 
+# add borders around focused window
+brew tap FelixKratz/formulae
+brew install borders
+brew services start borders
+
 # VSCode just in case NVIM is not good enough
 brew install --cask visual-studio-code
 ./install-vscode.sh
