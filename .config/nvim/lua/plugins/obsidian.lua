@@ -21,7 +21,7 @@ return {
     workspaces = {
       {
         name = "mind",
-        path = "~/git/mind/",
+        path = "~/git/mind-v2/",
       },
     },
 

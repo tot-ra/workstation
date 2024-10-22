@@ -89,6 +89,7 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 
 Leader (<kbd>F1</kbd>) and:
 
+- <kbd>:</kbd> `new` - create new session
 - <kbd>w</kbd> - choose window
 - <kbd>\*</kbd> - clears history and terminal
 - <kbd>?</kbd> - show key bindings
