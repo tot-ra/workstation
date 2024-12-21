@@ -11,8 +11,12 @@ brew install --cask keycastr
 # clipboard manager
 brew install maccy
 
-# Tailscale
+# Tailscale for connecting own devices in to a private network
 brew install tailscale
+
+# NGROK for public tunneling
+# ex. ngrok http http://localhost:1234 --host-header="localhost:1234"
+brew install ngrok/ngrok/ngrok
 
 # VSCode just in case NVIM is not good enough
 brew install --cask visual-studio-code
