@@ -1,3 +1,6 @@
+echo "Installing bat, a better du to find what is taking disk space"
+sudo apt install ncdu -y
+
 echo "Installing bat, a better cat"
 sudo apt install bat -y
 

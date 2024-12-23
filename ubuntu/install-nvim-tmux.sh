@@ -18,6 +18,12 @@ sudo apt update
 sudo apt install neovim -y
 apt-cache policy neovim
 
+# in case you don't have sudo:
+#cd ~
+#curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+#chmod u+x nvim.appimage
+# todo add alias for nvim to point to ~/nvim.appimage
+
 
 echo "Installing tmux"
 sudo apt install tmux -y
