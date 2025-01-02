@@ -40,6 +40,6 @@ alias sl="screen -ls"
 
 alias cat="bat"
 
-alias python="$(brew --prefix python@3.11)/libexec/bin/python"
+#alias python="$(brew --prefix python@3.11)/libexec/bin/python"
 
 source alias ai=~/ai-cli/ai
