@@ -12,11 +12,14 @@ sudo apt update
 sudo apt install wezterm
 
 echo "Installing latest neovim"
-sudo add-apt-repository ppa:neovim-ppa/stable -y
-sudo add-apt-repository ppa:neovim-ppa/unstable -y
-sudo apt update
-sudo apt install neovim -y
-apt-cache policy neovim
+#sudo add-apt-repository ppa:neovim-ppa/stable -y
+#sudo add-apt-repository ppa:neovim-ppa/unstable -y
+#sudo apt update
+#sudo apt install neovim -y
+#apt-cache policy neovim
+
+sudo snap install --beta nvim --classic
+
 
 # in case you don't have sudo:
 #cd ~
