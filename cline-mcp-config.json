@@ -23,7 +23,24 @@
           "GITHUB_PERSONAL_ACCESS_TOKEN": ""
         }
       },
-  
+        
+      "postgres": {
+          "disabled": false,
+          "timeout": 60,
+          "command": "/Users/artjom/.nvm/versions/node/v20.19.0/bin/node",
+          "args": [
+            "/Users/artjom/.nvm/versions/node/v20.19.0/lib/node_modules/npm/bin/npx-cli.js",
+            "-y",
+            "@modelcontextprotocol/server-postgres",
+            "postgresql://user:pass@localhost:5432/db"
+          ],
+          "env": {
+            "PATH": "/Users/artjom/.nvm/versions/node/v20.19.0/bin",
+            "NODE_PATH": "/Users/artjom/.nvm/versions/node/v20.19.0/lib/node_modules"
+          },
+          "transportType": "stdio",
+          "autoApprove": []
+        },
   
       "mcp_server_mysql": {
         "command": "npx",
