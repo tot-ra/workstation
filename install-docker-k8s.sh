@@ -2,6 +2,9 @@
 echo "Install kubectl"
 brew install kubectl
 
+echo "UI instead of docker for mac"
+brew install orbstack
+
 echo "Install k9s"
 brew install derailed/k9s/k9s
 export KUBE_EDITOR=nvim
@@ -15,3 +18,4 @@ brew install jesseduffield/lazydocker/lazydocker
 brew install lazydocker
 
 brew install helm
+

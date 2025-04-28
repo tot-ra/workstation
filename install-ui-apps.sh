@@ -57,3 +57,5 @@ brew install --cask lm-studio
 lms load lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF --identifier llama
 
 brew install --cask goland
+
+brew install bruno
