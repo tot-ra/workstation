@@ -157,6 +157,8 @@ Leader (<kbd>F1</kbd>) and:
   - <kbd>b</kbd> jump back to previous word
 - <kbd>f</kbd> - find character
   - <kbd>;</kbd> next
+- <kbd>m</kbd> - bookmark line (for harpoon)
+  - <kbd>TAB</kbd> - toggle bookmark list
 - <kbd>/</kbd> - search
   - <kbd>n</kbd> - next hit
 - <kbd>f(</kbd> - jump to next bracket
