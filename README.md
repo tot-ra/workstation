@@ -152,6 +152,7 @@ Leader (<kbd>F1</kbd>) and:
 
 - <kbd>F3</kbd> - find string
 - <kbd>F4</kbd> - find file
+- <kbd>:50</kbd> - go to line 50
 - <kbd>F11</kbd> - toggle DB UI
 - <kbd>Space</kbd> is set as leader
   - <kbd>gd</kbd> - go to definition
