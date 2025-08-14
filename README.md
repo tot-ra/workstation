@@ -19,6 +19,24 @@ This includes setup scripts for Mac and Ubuntu.
 - Keyboard -> Text Input -> Disable most things
 - Keyboard -> Accessibility -> Disable VoiceOver
 
+#### Window management shortcuts (with Rectangle)
+
+- <kbd>§</kbd> - center window
+- <kbd>Shift</kbd> <kbd>§</kbd> - restore window position
+- <kbd>Shift</kbd> <kbd>+</kbd> - increase window
+- <kbd>Shift</kbd> <kbd>-</kbd> - decrease window
+- <kbd>Shift</kbd> <kbd>F1</kbd> - move window left-top
+- <kbd>Shift</kbd> <kbd>F2</kbd> - move window right-top
+- <kbd>Shift</kbd> <kbd>F3</kbd> - move window left-bottom
+- <kbd>Shift</kbd> <kbd>F4</kbd> - move window right-bottom
+
+#### Warp terminal shortcuts
+
+- <kbd>Cmd</kbd> <kbd>+</kbd> - increase font
+- <kbd>Cmd</kbd> <kbd>-</kbd> - decrease font
+- <kbd>Cmd</kbd> <kbd>t</kbd> - open tab
+- <kbd>Cmd</kbd> <kbd>n</kbd> - open new window
+
 ### Apps
 
 To install, run: `./install-ui-apps.sh`
@@ -111,7 +129,7 @@ Leader (<kbd>F1</kbd>) and:
 - `tmux a` - attach to new session
 - `tmux a -t my-session` - attach to session by name
 
-#### Windows
+#### Tmux Windows
 
 - <kbd>F1</kbd> <kbd>+</kbd> - create window
 - <kbd>F1</kbd> <kbd>-</kbd> - split window horizontally

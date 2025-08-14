@@ -1,12 +1,14 @@
-# Wezterm
-brew install --cask wezterm
-ln -s ~/git/workstation/.config/wezterm ~/.config/wezterm
+# Warp terminal
+brew install --cask warp
+
+#brew install --cask wezterm
+#ln -s ~/git/workstation/.config/wezterm ~/.config/wezterm
 
 # Password manager
 brew install --cask bitwarden
 
 # visualize keystrokes on the screen for video recordings
-brew install --cask keycastr
+#brew install --cask keycastr
 
 # clipboard manager
 brew install maccy
