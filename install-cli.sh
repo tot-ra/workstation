@@ -11,22 +11,19 @@ brew install font-hack-nerd-font
 
 echo "Install powerlevel10k"
 brew install powerlevel10k
-echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 p10k configure
 
 echo "Install zsh-autosuggestions"
 brew install zsh-autosuggestions
-echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
-
+echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >>~/.zshrc
 
 echo "Install zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
-echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
-
+echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>~/.zshrc
 
 echo "Install midnight commander file manager"
 brew install mc
-
 
 echo "Install yazi file manager"
 brew install yazi ffmpegthumbnailer sevenzip jq poppler fd ripgrep imagemagick font-symbols-only-nerd-font
@@ -55,7 +52,6 @@ brew install parallel
 echo "Installing gsed to manipulate files, similar to sed but with more compatibility with linux"
 brew install gnu-sed --with-default-names
 
-
 ## MONITORING
 
 echo "Install btop and htop process managers"
@@ -64,9 +60,8 @@ brew install btop htop
 echo "Install procs process manager, a ps alternative, use with sudo"
 # https://github.com/dalance/procs
 brew install procs
-sudo tee -a /etc/sudoers <<< "$USER ALL= NOPASSWD: /usr/local/bin/procs"
+sudo tee -a /etc/sudoers <<<"$USER ALL= NOPASSWD: /usr/local/bin/procs"
 source <(procs --gen-completion-out zsh)
-
 
 ## TEXT PROCESSING
 echo "Install json viewer"
@@ -81,9 +76,6 @@ brew install yq
 echo "Installing jqp to manipulate json files, similar to jq"
 brew install noahgorstein/tap/jqp
 
-
-
-
 ## NETWORKING
 echo "Install wget to download files as alternative to curl"
 brew install wget
@@ -91,9 +83,8 @@ brew install wget
 echo "Install telnet for oldies"
 brew install telnet
 
-
-
-
+echo "Install disk usage analyzer"
+brew install ncdu
 
 echo "Install tldr as alternative to man"
 brew install tldr
