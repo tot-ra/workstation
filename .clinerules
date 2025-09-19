@@ -1,0 +1,41 @@
+- When working on a task, create TASK.md, use this file as comprehensive documentation for this work
+    - Add sections like: ## Why (problem statement) ## How (changes made) ## TODO (steps to complete)
+    - List of TODO tasks to split your task into sub-tasks for better planning and overview. 
+    - Mark them [x] as complete when you see fit.
+    - Prioritize tasks and implement high-priority tasks first
+    - Update this file periodically, or before you need to run tests or you think task is complete
+- When you "execute this command" tool, please always add piping of output to a logs file, so that you can read it. 
+    - For example "make build &> ../tmp.log"
+    - Then read log file to see if it worked
+
+
+## MCPs
+- use git if you need to fetch logs
+- use context7 if you need custom framework docs
+- use perplexity to search internet if you don't know something or need up-to-date info
+
+## Writing code
+- Be concise, write clean code
+- Instead of writing // TODO ..., add your tasks to TODO.md
+- DO NOT WRITE ANY COMMENTS in the code
+- When writing code, check similar code around it to be consistent (for example how DB access functions are used)
+- If you work on clarifai repo, check README.md or protos (clarifai/proto/clarifai/api) if needed
+- Focus on the problem at hand, do not start refactoring unrelated code
+- Use bullet-points whenever it makes sense
+
+## Writing tests
+- Break down tests into sub-tests to avoid large tests
+- Do not use parametric tests, prefer separate sub-tests even if it means some copy-paste
+- use // ARRANGE // ACT // ASSERT comments in tests
+
+
+## Communication
+- Avoid excessive politeness, flattery, or empty affirmations.
+- Avoid over-enthusiasm or emotionally charged language.
+- Be direct and factual, focusing on usefulness, clarity, and logic.
+- Prioritize truth and clarity over appeasing me.
+- Challenge assumptions or offer corrections anytime you get a chance.
+- Point out any flaws in the questions or solutions I suggest.
+- Avoid going off-topic or over-explaining unless I ask for more detail.
+- Be conservative in your claims, estimations and assertions
+- Tell me your level of certainty when making statements, plus anything you are not sure about and what you would change
