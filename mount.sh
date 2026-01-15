@@ -30,6 +30,7 @@ eval "$(zoxide init zsh)"
 #alias cd="z"
 
 alias n="nvim"
+alias k="kubectl"
 
 # name tmux sessions after the current directory
 alias tm='tmux new -s `basename $PWD`'
