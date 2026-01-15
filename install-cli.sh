@@ -88,6 +88,3 @@ brew install ncdu
 
 echo "Install tldr as alternative to man"
 brew install tldr
-# Install ai CLI
-git clone https://github.com/tot-ra/ai-cli.git ~/ai-cli
-cd ai-cli && go build ai.go
