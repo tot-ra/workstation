@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Install sag (ElevenLabs TTS tool) using Go
+echo "Installing sag..."
+go install github.com/steipete/sag/cmd/sag@latest
+
+# Verify installation
+if command -v sag &> /dev/null; then
+    echo "sag installed successfully"
+    sag --version
+else
+    echo "Warning: sag installation may have failed or ~/go/bin is not in PATH"
+    echo "Add this to your ~/.bashrc or ~/.zshrc: export PATH=\$PATH:~/go/bin"
+fi

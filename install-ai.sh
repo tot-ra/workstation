@@ -1,4 +1,5 @@
 brew install anomalyco/tap/opencode
+brew install steipete/tap/sag
 
 # LM studio
 brew install --cask lm-studio
