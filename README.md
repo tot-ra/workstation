@@ -19,6 +19,24 @@ This includes setup scripts for Mac and Ubuntu.
 - Keyboard -> Text Input -> Disable most things
 - Keyboard -> Accessibility -> Disable VoiceOver
 
+#### Window management shortcuts (with Rectangle)
+
+- <kbd>§</kbd> - center window
+- <kbd>Shift</kbd> <kbd>§</kbd> - restore window position
+- <kbd>Shift</kbd> <kbd>+</kbd> - increase window
+- <kbd>Shift</kbd> <kbd>-</kbd> - decrease window
+- <kbd>Shift</kbd> <kbd>F1</kbd> - move window left-top
+- <kbd>Shift</kbd> <kbd>F2</kbd> - move window right-top
+- <kbd>Shift</kbd> <kbd>F3</kbd> - move window left-bottom
+- <kbd>Shift</kbd> <kbd>F4</kbd> - move window right-bottom
+
+#### Warp terminal shortcuts
+
+- <kbd>Cmd</kbd> <kbd>+</kbd> - increase font
+- <kbd>Cmd</kbd> <kbd>-</kbd> - decrease font
+- <kbd>Cmd</kbd> <kbd>t</kbd> - open tab
+- <kbd>Cmd</kbd> <kbd>n</kbd> - open new window
+
 ### Apps
 
 To install, run: `./install-ui-apps.sh`
@@ -31,7 +49,6 @@ Others need manual installation:
 - [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
 - RealVNC
 - Discord
-- [GrandPerspective](https://grandperspectiv.sourceforge.net/) to see HDD usage
 - [Monocle](https://monokle.io/download) to access k8s logs
 - Microsoft TODO
 
@@ -70,6 +87,7 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 
 ### Manual steps after installation
 
+- run `tmux` and run <kbd>F1</kbd> <kbd>I</kbd> to install plugins
 - run `lazygit` first time to activate
 - run nvim and from cmd mode run (where you'll need to install plugins):
 
@@ -80,22 +98,29 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 :Mason
 ```
 
-## Keyboard shortcuts
+## Custom keyboard shortcuts
 
-- `F1` - tmux
-- `F12` - toggle fullscreen (wezterm)
+- <kbd>F1</kbd> - tmux
+- <kbd>F12</kbd> - toggle fullscreen (wezterm)
 
 ### TMux
 
-Leader (`F1`) and:
+Leader (<kbd>F1</kbd>) and:
 
-- `?` - show key bindings
-- `t` - select session
-- `r` - reload config
-- `I` - install plugins
-- `:` - command mode
-- `$` - rename session
-- `d` - detach from session
+- <kbd>:</kbd> `new` - create new session
+- <kbd>w</kbd> - choose window
+- <kbd>\*</kbd> - clears history and terminal
+- <kbd>?</kbd> - show key bindings
+- <kbd>r</kbd> - reload config
+- <kbd>I</kbd> - install plugins
+- <kbd>:</kbd> - command mode
+- <kbd>$</kbd> - rename session
+- <kbd>d</kbd> - detach from session
+
+- <kbd>[</kbd> - enter copy mode
+  - <kbd>Space</kbd> - start selection
+  - <kbd>Enter</kbd> - copy selection
+  - <kbd>]</kbd> - paste selection
 
 #### Sessions
 
@@ -104,91 +129,92 @@ Leader (`F1`) and:
 - `tmux a` - attach to new session
 - `tmux a -t my-session` - attach to session by name
 
-#### Windows
+#### Tmux Windows
 
-- `c` - create window
-- `Ctrl+Shift-right` - next window
-- `Ctrl+Shift-left` - previous window
-- `1` - switch to window 1
-- `,` - rename window
-- `.` - move window
+- <kbd>F1</kbd> <kbd>+</kbd> - create window
+- <kbd>F1</kbd> <kbd>-</kbd> - split window horizontally
+- <kbd>F1</kbd> <kbd>|</kbd> - split window vertically
+- <kbd>Ctrl</kbd> <kbd>Shift</kbd> right - next window
+- <kbd>Ctrl</kbd> <kbd>Shift</kbd> left - previous window
+- <kbd>,</kbd> - rename window
+- <kbd>.</kbd> - move window
 
 #### Panes
 
-- `Ctrl+arrows` - moves between panes (including within nvim)
-- `"` - split window to panes horizontally
-- `%` - split window to panes vertically
-- `z` - zoom pane (toggle)
-- `!` - move pane to own window
-- `o` - switch session (interactive with [plugin](https://github.com/omerxx/tmux-sessionx))
+- <kbd>Ctrl</kbd> <kbd>arrows</kbd> - moves between panes (including within nvim)
+- <kbd>"</kbd> - split window to panes horizontally
+- <kbd>%</kbd> - split window to panes vertically
+- <kbd>z</kbd> - zoom pane (toggle)
+- <kbd>!</kbd> - move pane to own window
+- <kbd>o</kbd> - switch session (interactive with [plugin](https://github.com/omerxx/tmux-sessionx))
 
 ### Neovim
 
-- `Space` is set as leader
-  - `gd` - go to definition
-  - `e` - toggle tree view
-- `Tab` - accept completion
-- `Alt-left/right` - switch between tabs
-- `Alt-up` - close tab
-- `Alt-down` - pin tab
+- <kbd>F3</kbd> - find string
+- <kbd>F4</kbd> - find file
+- <kbd>:50</kbd> - go to line 50
+- <kbd>F11</kbd> - toggle DB UI
+- <kbd>Space</kbd> is set as leader
+  - <kbd>gd</kbd> - go to definition
+  - <kbd>e</kbd> - toggle tree view
+- <kbd>Tab</kbd> - accept completion
+- <kbd>Alt</kbd> <kbd>left/right</kbd> - switch between tabs
+- <kbd>Alt</kbd> <kbd></kbd>up</kbd> - close tab
+- <kbd>Alt</kbd> <kbd>down</kbd> - pin tab
+- <kbd>Ctrl</kbd> <kbd>I</kbd> - go to previous location
+  - <kbd>Ctrl</kbd> <kbd>O</kbd> - go to next location
 
 #### Movement
 
-- `Ctrl+z` - jump to characters (flash plugin)
-- `gg` - go to top of the file
-  - `G` - go to end of the file
-- `20G` - go to line 20
-- `5j` - go up 5 lines
-  - `5k` - go down 5 lines
-- `w` jump to next word
-  - `b` jump back to previous word
-- `f` - find character
-  - `;` next
-- `/` - search
-  - `n` - next hit
-- `f(` - jump to next bracket
+- <kbd>s</kbd> - jump to characters (flash plugin)
+- <kbd>gg</kbd> - go to top of the file
+  - <kbd>G</kbd> - go to end of the file
+- <kbd>20G</kbd> - go to line 20
+- <kbd>5j</kbd> - go up 5 lines
+  - <kbd>5k</kbd> - go down 5 lines
+- <kbd>w</kbd> jump to next word
+  - <kbd>b</kbd> jump back to previous word
+- <kbd>f</kbd> - find character
+  - <kbd>;</kbd> next
+- <kbd>m</kbd> - bookmark line (for harpoon)
+  - <kbd>TAB</kbd> - toggle bookmark list
+- <kbd>/</kbd> - search
+  - <kbd>n</kbd> - next hit
+- <kbd>f(</kbd> - jump to next bracket
 
 #### Code folding
 
-- `za` - Toggle between closing and opening the fold under the cursor.
-- `zR` - Open all folds in the current buffer.
-- `zM` - Close all folds in the current buffer.
+- <kbd>za</kbd> - Toggle between closing and opening the fold under the cursor.
+- <kbd>zR</kbd> - Open all folds in the current buffer.
+- <kbd>zM</kbd> - Close all folds in the current buffer.
 
 #### Commenting
 
-Instead of using plugins we use native vim support:
+- <kbd>gcc</kbd> - comment line
 
-- `Ctrl+V` enter visual block mode
-- Select lines
-- `Shift+I` enter insert mode
-- type `//` or other comment symbols
-- `Esc` to apply changes
+#### Replace
 
-To uncomment:
-
-- do the same, but instead of `//`, use `x` to delete characters
+```
+:%s/from/to/gc
+```
 
 #### Insert mode
 
-- `F2` - search/replace (nvim) with LSP
-- `I` - switch to insert mode + go to beginning of the line
-- `A` - switch to insert mode + go to end of the line
-- `i` - switch to insert mode
-- `o` - switch to insert mode + add new line after current one
+- <kbd>F2</kbd> - search/replace (nvim) with LSP
+- <kbd>I</kbd> - switch to insert mode + go to beginning of the line
+- <kbd>A</kbd> - switch to insert mode + go to end of the line
+- <kbd>i</kbd> - switch to insert mode
+- <kbd>o</kbd> - switch to insert mode + add new line after current one
 
 #### Visual mode
 
-- `y` - copy (yield)
-- `p` - paste
-- `d` - cut
-- `dd` - delete line
-- `u` - undo
-- `w` - select word
-
-### Database UI
-
-- `F11` - toggle DB UI
+- <kbd>y</kbd> - copy (yield)
+- <kbd>p</kbd> - paste
+- <kbd>d</kbd> - cut
+- <kbd>dd</kbd> - delete line
+- <kbd>u</kbd> - undo
+- <kbd>w</kbd> - select word
 
 ### Git
 
-- `Space gg` - toggle lazygit
+- <kbd>Space</kbd> <kbd>gg</kbd> - toggle lazygit

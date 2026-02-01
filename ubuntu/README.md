@@ -1,8 +1,10 @@
 ## ubuntu-speicific setup
 
-Assuming ubuntu v22, x86 64bit. 
+Assuming you got ubuntu v22, x86 64bit version.
+(Because v24 is not that well supported by nvidia yet afaik)
 
 ```
+sudo apt install git -y
 curl -s https://raw.githubusercontent.com/tot-ra/workstation/main/ubuntu/install.sh | bash && \
 curl -s https://raw.githubusercontent.com/tot-ra/workstation/main/ubuntu/aliases.sh > aliases.sh && \
 echo "source ~/aliases.sh" >> ~/.zshrc

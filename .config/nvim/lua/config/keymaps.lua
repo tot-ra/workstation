@@ -17,6 +17,8 @@ local opts = { remap = false, silent = true }
 
 -- avoid loss of changes on quick exit
 vim.keymap.set("n", "Q", "<nop>", opts)
+
+-- this it taken by tmux leader key, so avoid opening help
 vim.keymap.set("n", "<F1>", "<nop>", opts)
 
 -- Ctrl-s to save file
@@ -33,7 +35,8 @@ vim.keymap.set({ "i", "n" }, "<C-a>", "<esc>ggVGy", { desc = "Select all an copy
 vim.keymap.set({ "v" }, "<C-a>", "nggVGy", { desc = "Select all an copy", remap = true })
 
 -- F4 to do global search, same as Mac search icon
-vim.keymap.set({ "i", "n" }, "<F4>", "<esc><leader>sg", { desc = "Search in workspace", remap = true })
+vim.keymap.set({ "i", "n" }, "<F3>", "<esc><leader>sg", { desc = "Search string", remap = true })
+vim.keymap.set({ "i", "n" }, "<F4>", "<esc><leader>fF", { desc = "Find file", remap = true })
 
 -- Moving line one at a time
 vim.keymap.set({ "i", "n" }, "<CS-Down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })

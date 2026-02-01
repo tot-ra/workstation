@@ -24,7 +24,7 @@ config.disable_default_key_bindings = true
 config.use_ime = true -- yes emojis 🎉
 config.use_dead_keys = false
 
-config.window_decorations = "RESIZE"
+config.window_decorations = "TITLE | RESIZE"
 config.window_background_opacity = 0.93
 config.macos_window_background_blur = 30
 config.audible_bell = "Disabled"
@@ -39,6 +39,12 @@ config.keys = {
 		key = "c",
 		mods = "CMD",
 		action = wezterm.action.CopyTo("Clipboard"),
+	},
+
+	{
+		key = "f",
+		mods = "SUPER",
+		action = act.Search({ CaseSensitiveString = "" }),
 	},
 
 	{ key = "Insert", mods = "SHIFT", action = act.PasteFrom("PrimarySelection") },

@@ -9,3 +9,5 @@ nvm install 16
 
 # copilot lsp wants v20
 nvm alias default 20
+
+brew install pnpm

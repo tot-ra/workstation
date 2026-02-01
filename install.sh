@@ -30,3 +30,4 @@ source ~/.zshrc
 ./install-media.sh
 ./install-node.sh
 ./install-python.sh
+./install-ai.sh
