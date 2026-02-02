@@ -29,6 +29,7 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(zoxide init zsh)"
 #alias cd="z"
 
+alias o="opencode"
 alias n="nvim"
 alias k="kubectl"
 
