@@ -1,4 +1,5 @@
 alias n="nvim"
+alias o="opencode"
 alias ls="eza --long --header --icons --octal-permissions --no-user --no-permissions"
 
 # better cd
