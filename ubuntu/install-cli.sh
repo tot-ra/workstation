@@ -43,3 +43,24 @@ wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --de
 echo "deb [arch=all,$(dpkg --print-architecture) signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list
 sudo apt update
 sudo apt install just -y
+
+echo "Installing Ghostty (AppImage)"
+mkdir -p ~/.local/bin
+GHOSTTY_URL=$(curl -s https://api.github.com/repos/pkgforge-dev/ghostty-appimage/releases/latest | grep "browser_download_url.*x86_64.*appimage" | head -n 1 | cut -d '"' -f 4)
+curl -L -o ~/.local/bin/ghostty "$GHOSTTY_URL"
+chmod +x ~/.local/bin/ghostty
+
+echo "Adding Ghostty desktop entry"
+mkdir -p ~/.local/share/applications
+cat <<EOF > ~/.local/share/applications/ghostty.desktop
+[Desktop Entry]
+Name=Ghostty
+Comment=Ghostty Terminal Emulator
+Exec=$HOME/.local/bin/ghostty
+Icon=utilities-terminal
+Type=Application
+Categories=System;TerminalEmulator;
+Terminal=false
+StartupNotify=true
+EOF
+chmod +x ~/.local/share/applications/ghostty.desktop
