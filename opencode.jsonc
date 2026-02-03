@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["opencode-scheduler"],
+  
+  // Модульные инструкции агента
+  "instructions": [
+    "agent/rules/*.md"
+  ],
+  
+  "mcp": {
+    "context7-library-docs": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp@latest"],
+      "enabled": false,
+      "timeout": 60000
+    },
+    "github": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "enabled": false,
+      "timeout": 60000
+    },
+    "search-internet-perplexity": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "perplexity-mcp"
+      ],
+      "environment": {
+        "PERPLEXITY_API_KEY": "{env:PERPLEXITY_API_KEY}"
+      },
+      "enabled": true,
+      "timeout": 60000
+    }
+  }
+}
