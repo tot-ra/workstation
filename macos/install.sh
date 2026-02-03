@@ -35,10 +35,10 @@ fi
 
 echo ""
 echo "Installing core components..."
-./install-git.sh
-./install-go.sh
-./install-cli.sh
-./install-nvim-tmux.sh
+"$SCRIPT_DIR/install-git.sh"
+"$SCRIPT_DIR/install-go.sh"
+"$SCRIPT_DIR/install-cli.sh"
+"$SCRIPT_DIR/install-nvim-tmux.sh"
 
 if ! command -v rustc &> /dev/null; then
     echo "Installing rust for nvim -> mason -> cmake..."
@@ -56,12 +56,12 @@ source ~/.zshrc 2>/dev/null || true
 
 echo ""
 echo "Installing additional components..."
-./install-db.sh
-./install-docker-k8s.sh
-./install-media.sh
-./install-node.sh
-./install-python.sh
-./install-ai.sh
+"$SCRIPT_DIR/install-db.sh"
+"$SCRIPT_DIR/install-docker-k8s.sh"
+"$SCRIPT_DIR/install-media.sh"
+"$SCRIPT_DIR/install-node.sh"
+"$SCRIPT_DIR/install-python.sh"
+"$SCRIPT_DIR/install-ai.sh"
 
 echo ""
 echo "================================================"
