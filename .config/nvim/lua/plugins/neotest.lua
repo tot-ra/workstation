@@ -11,7 +11,7 @@ return {
     "nvim-neotest/neotest-vim-test",
 
     {
-      "echasnovski/mini.indentscope",
+      "nvim-mini/mini.indentscope",
       opts = function()
         -- disable indentation scope for the neotest-summary buffer
         vim.cmd([[

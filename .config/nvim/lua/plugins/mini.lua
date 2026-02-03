@@ -1,5 +1,5 @@
 return {
-	"echasnovski/mini.ai",
+	"nvim-mini/mini.ai",
 	cond = false,
 	event = "VeryLazy",
 	opts = function()

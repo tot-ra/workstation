@@ -1,3 +1,9 @@
+echo "Installing fzf (fuzzy finder)"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --bin
+echo 'export PATH="$HOME/.fzf/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/.fzf/bin:$PATH"' >> ~/.zshrc
+
 echo "Installing bat, a better du to find what is taking disk space"
 sudo apt install ncdu -y
 

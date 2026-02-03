@@ -60,18 +60,20 @@ require("lazy").setup({
   },
 })
 
-local config = { -- Specify configuration
-  go_test_args = {
-    "-v",
-    "-race",
-    "-count=1",
-    "-coverprofile=" .. vim.fn.getcwd() .. "/coverage.out",
-  },
-}
-require("neotest").setup({
-  adapters = {
-    require("neotest-golang")(config), -- Apply configuration
-  },
-})
 
-require("neotest.logging"):set_level(vim.log.levels.DEBUG)
+-- local config = { -- Specify configuration
+--   go_test_args = {
+--     "-v",
+--     "-race",
+--     "-count=1",
+--     "-coverprofile=" .. vim.fn.getcwd() .. "/coverage.out",
+--   },
+-- }
+-- require("neotest").setup({
+--   adapters = {
+--     require("neotest-golang")(config), -- Apply configuration
+--   },
+-- })
+-- 
+-- require("neotest.logging"):set_level(vim.log.levels.DEBUG)
+
