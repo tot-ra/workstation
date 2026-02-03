@@ -32,3 +32,12 @@ echo "Installing tmux"
 sudo apt install tmux -y
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+echo "Syncing tmux and nvim configurations"
+# Tmux sync
+rm -rf ~/.tmux.conf
+cp -f ~/git/workstation/.tmux.conf ~/.tmux.conf
+
+# Nvim sync (symlink)
+rm -rf ~/.config/nvim
+ln -s ~/git/workstation/.config/nvim ~/.config/nvim
