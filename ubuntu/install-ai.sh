@@ -9,17 +9,17 @@ echo "Installing sag..."
 go install github.com/steipete/sag/cmd/sag@latest
 
 # Verify installations
-if command -v opencode &> /dev/null; then
-    echo "OpenCode installed successfully"
-    opencode --version
+if command -v opencode &>/dev/null; then
+  echo "OpenCode installed successfully"
+  opencode --version
 else
-    echo "Warning: OpenCode installation may have failed"
+  echo "Warning: OpenCode installation may have failed"
 fi
 
-if command -v sag &> /dev/null; then
-    echo "sag installed successfully"
-    sag --version
+if command -v sag &>/dev/null; then
+  echo "sag installed successfully"
+  sag --version
 else
-    echo "Warning: sag installation may have failed or ~/go/bin is not in PATH"
-    echo "Add this to your ~/.bashrc or ~/.zshrc: export PATH=\$PATH:~/go/bin"
+  echo "Warning: sag installation may have failed or ~/go/bin is not in PATH"
+  echo "Add this to your ~/.bashrc or ~/.zshrc: export PATH=\$PATH:~/go/bin"
 fi
