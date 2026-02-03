@@ -28,18 +28,6 @@ sudo snap install --beta nvim --classic
 # todo add alias for nvim to point to ~/nvim.appimage
 
 
-echo "Installing Rust (needed for tree-sitter-cli on ARM64/Ubuntu 22.04)"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-source "$HOME/.cargo/env"
-echo 'source "$HOME/.cargo/env"' >> ~/.bashrc
-echo 'source "$HOME/.cargo/env"' >> ~/.zshrc
-
-echo "Installing libclang-dev (needed for tree-sitter-cli compilation)"
-sudo apt install -y libclang-dev
-
-echo "Installing tree-sitter-cli (compile locally to avoid GLIBC issues)"
-cargo install tree-sitter-cli
-
 echo "Installing tmux"
 sudo apt install tmux -y
 
