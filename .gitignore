@@ -1,1 +1,14 @@
 .tmp.driveupload
+
+*.log
+.env
+.env.local
+.env.*.local
+secrets/
+*.key
+*.pem
+.DS_Store
+temp_install.sh
+
+.workstation-logs/
+backup-*/

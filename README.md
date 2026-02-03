@@ -74,6 +74,10 @@ cat ~/.ssh/id_rsa.pub
 
 ```bash
 chmod +x install.sh
+
+# Optional: Backup existing configs before installation
+./backup.sh
+
 git clone git@github.com:tot-ra/workstation.git ~/git/workstation
 ~/git/workstation/install.sh
 echo "source ~/git/workstation/mount.sh" >> ~/.zshrc
@@ -84,6 +88,13 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 
 # now add this key to github --> https://github.com/settings/ssh/new
 ```
+
+**Features:**
+- ✅ Idempotent - safe to run multiple times
+- 📝 Detailed logging in `~/.workstation-logs/`
+- 🔄 Version management via `versions.env`
+- 🛡️ Security best practices built-in
+- 💾 Backup script for existing configs
 
 ### Manual steps after installation
 
@@ -96,6 +107,36 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 :LazyExtras
 :Copilot auth
 :Mason
+```
+
+### Version Management
+
+Edit `versions.env` to customize software versions:
+```bash
+# Example: Change Node.js default version
+NODE_VERSION_DEFAULT="18"
+
+# Example: Use different Go version
+GO_VERSION="1.21"
+```
+
+### Project Structure
+
+```
+workstation/
+├── install.sh              # Main installation script (Mac)
+├── backup.sh               # Backup existing configurations
+├── common-functions.sh     # Shared helper functions
+├── versions.env            # Version management
+├── checksums.env           # Security checksums
+├── install-*.sh            # Component-specific installers
+├── .config/                # Application configs
+│   ├── nvim/              # Neovim/LazyVim config
+│   └── wezterm/           # Wezterm terminal config
+├── ubuntu/                 # Ubuntu-specific scripts
+├── CHANGELOG.md            # Version history
+├── SECURITY.md             # Security guidelines
+└── README.md               # This file
 ```
 
 ## Custom keyboard shortcuts
@@ -218,3 +259,237 @@ Leader (<kbd>F1</kbd>) and:
 ### Git
 
 - <kbd>Space</kbd> <kbd>gg</kbd> - toggle lazygit
+
+## 🔧 Troubleshooting
+
+### Installation Issues
+
+#### NVM not found after installation
+**Problem**: `nvm: command not found` after running install script
+
+**Solution**: 
+```bash
+# Restart your terminal or source the config
+source ~/.zshrc
+
+# Verify NVM is loaded
+command -v nvm
+```
+
+#### Tmux plugins not installing
+**Problem**: Tmux plugins don't install when pressing F1 + I
+
+**Solution**:
+```bash
+# Ensure TPM is installed
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Restart tmux
+tmux kill-server
+tmux
+
+# Press F1 + I to install plugins
+```
+
+#### Brew installation fails
+**Problem**: Homebrew packages fail to install
+
+**Solution**:
+```bash
+# Update brew
+brew update
+
+# Diagnose issues
+brew doctor
+
+# Check installation logs
+cat ~/.workstation-logs/install-*.log
+```
+
+#### Neovim plugins not loading
+**Problem**: Neovim starts but plugins are missing
+
+**Solution**:
+```bash
+# Open neovim and run
+nvim
+
+# In nvim command mode, run:
+:Lazy
+:Lazy sync
+
+# Check for errors
+:checkhealth
+```
+
+### Runtime Issues
+
+#### Zsh completions not working
+**Problem**: Tab completion doesn't work in zsh
+
+**Solution**:
+```bash
+# Fix permissions
+compaudit | xargs chmod g-w,o-w
+
+# Rebuild completion cache
+rm ~/.zcompdump*
+exec zsh
+```
+
+#### Git authentication fails
+**Problem**: Cannot push/pull from GitHub
+
+**Solution**:
+```bash
+# Check if SSH key exists
+ls -la ~/.ssh/id_rsa.pub
+
+# If not, generate one
+ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+
+# Add to GitHub: https://github.com/settings/ssh/new
+cat ~/.ssh/id_rsa.pub
+```
+
+#### Docker/Kubernetes not working
+**Problem**: kubectl or docker commands fail
+
+**Solution**:
+```bash
+# Ensure OrbStack is running
+open -a OrbStack
+
+# Check kubectl context
+kubectl config current-context
+
+# Verify docker
+docker ps
+```
+
+#### Python/Node version issues
+**Problem**: Wrong Python or Node version active
+
+**Solution**:
+```bash
+# For Node (using nvm)
+nvm use 20
+nvm alias default 20
+
+# For Python (if using pyenv)
+pyenv global 3.11
+```
+
+### Configuration Issues
+
+#### Powerlevel10k not loading
+**Problem**: Terminal prompt doesn't show p10k theme
+
+**Solution**:
+```bash
+# Reconfigure p10k
+p10k configure
+
+# Ensure it's in .zshrc
+grep powerlevel10k ~/.zshrc
+
+# If missing, add it
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
+```
+
+#### Tmux configuration not applied
+**Problem**: Tmux doesn't use custom config
+
+**Solution**:
+```bash
+# Ensure symlink exists
+ls -la ~/.tmux.conf
+
+# If not, create it
+ln -sf ~/git/workstation/.tmux.conf ~/.tmux.conf
+
+# Reload tmux config (inside tmux)
+# Press F1 + r
+```
+
+#### Nvim configuration conflicts
+**Problem**: Custom nvim config conflicts with LazyVim
+
+**Solution**:
+```bash
+# Backup your config
+mv ~/.config/nvim ~/.config/nvim.backup
+
+# Link to workstation config
+ln -s ~/git/workstation/.config/nvim ~/.config/nvim
+
+# Restart nvim and run
+:Lazy restore
+```
+
+### Performance Issues
+
+#### Zsh slow startup
+**Problem**: Terminal takes long to open
+
+**Solution**:
+```bash
+# Profile zsh startup
+time zsh -i -c exit
+
+# Disable plugins temporarily to identify culprit
+# Comment out plugins in ~/.zshrc one by one
+
+# Common culprits:
+# - nvm (use lazy loading)
+# - Too many plugins
+```
+
+#### Nvim slow to start
+**Problem**: Neovim takes several seconds to open
+
+**Solution**:
+```bash
+# Profile nvim startup
+nvim --startuptime startup.log
+
+# Review which plugins are slow
+cat startup.log | sort -k2 -n
+
+# Consider lazy-loading slow plugins
+```
+
+### Getting Help
+
+If you're still stuck:
+
+1. **Check logs**: Installation logs are in `~/.workstation-logs/`
+2. **Search issues**: Check [GitHub issues](https://github.com/tot-ra/mac-work/issues)
+3. **Create issue**: Open a new issue with:
+   - Your OS version (`sw_vers` on Mac, `lsb_release -a` on Ubuntu)
+   - Error messages from logs
+   - Steps to reproduce
+
+### Common Commands for Debugging
+
+```bash
+# Check what's using a port
+lsof -i :3000
+
+# Check system info (Mac)
+sw_vers
+system_profiler SPSoftwareDataType
+
+# Check disk space
+df -h
+
+# Check running processes
+ps aux | grep <process-name>
+
+# View installation logs
+tail -f ~/.workstation-logs/install-*.log
+
+# Check brew services
+brew services list
+```
+
