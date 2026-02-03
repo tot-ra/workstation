@@ -1,58 +1,47 @@
-# Warp terminal
-brew install --cask warp
+#!/bin/bash
 
-#brew install --cask wezterm
-#ln -s ~/git/workstation/.config/wezterm ~/.config/wezterm
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/common-functions.sh"
 
-# Password manager
-brew install --cask bitwarden
+log_info "Starting UI applications installation..."
 
-# visualize keystrokes on the screen for video recordings
-#brew install --cask keycastr
+log_info "Installing terminal and development tools..."
+install_brew_cask "warp"
+install_brew_cask "visual-studio-code"
 
-# clipboard manager
-brew install maccy
+if [ -x "./install-vscode.sh" ]; then
+    log_info "Installing VSCode extensions..."
+    ./install-vscode.sh
+fi
 
-# Tailscale for connecting own devices in to a private network
-brew install tailscale
+log_info "Installing productivity tools..."
+install_brew_cask "bitwarden"
+install_brew_package "maccy"
+install_brew_package "tailscale"
+install_brew_package "ngrok/ngrok/ngrok"
 
-# NGROK for public tunneling
-# ex. ngrok http http://localhost:1234 --host-header="localhost:1234"
-brew install ngrok/ngrok/ngrok
+log_info "Installing utilities..."
+install_brew_cask "keka"
+install_brew_cask "kap"
+install_brew_cask "vlc"
+install_brew_cask "grandperspective"
+install_brew_package "devtoys"
 
-# VSCode just in case NVIM is not good enough
-brew install --cask visual-studio-code
-./install-vscode.sh
+log_info "Installing communication tools..."
+install_brew_cask "slack"
 
-# Keka archive manager
-brew install --cask keka
+log_info "Installing note-taking and documentation..."
+install_brew_cask "notion"
+install_brew_cask "obsidian"
 
-# Kap screen recorder
-brew install --cask kap
+log_info "Installing media..."
+install_brew_cask "spotify"
 
-# VLC video player
-brew install --cask vlc
+log_info "Installing window management..."
+install_brew_cask "rectangle"
 
-# Corporate messenger
-brew install --cask slack
+log_info "Installing development tools..."
+install_brew_cask "goland"
+install_brew_package "bruno"
 
-# Documenting and note taking
-brew install --cask notion
-brew install --cask obsidian
-
-# Music player
-brew install --cask spotify
-
-# Rectangle window manager
-brew install --cask rectangle
-
-# GrandPerspective disk usage visualization
-brew install --cask grandperspective
-
-# Install DevToys for conversions
-brew install devtoys
-open /Applications/DevToys.app
-
-brew install --cask goland
-
-brew install bruno
+log_success "UI applications installation completed!"

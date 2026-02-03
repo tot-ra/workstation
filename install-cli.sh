@@ -1,90 +1,88 @@
+#!/bin/bash
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/common-functions.sh"
+source_versions
+
+log_info "Starting CLI tools installation..."
+
+log_info "Updating brew..."
 brew update
 brew upgrade
 
-echo "Installing zsh"
-sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-compaudit | xargs chmod g-w,o-w
+if ! command_exists zsh; then
+    log_info "Installing zsh and oh-my-zsh..."
+    sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    compaudit | xargs chmod g-w,o-w
+    log_success "zsh installed"
+else
+    log_skip "zsh already installed"
+fi
 
-echo "Install fonts"
-brew tap homebrew/cask-fonts
-brew install font-hack-nerd-font
+log_info "Installing fonts..."
+brew tap homebrew/cask-fonts 2>/dev/null || true
+install_brew_package "font-hack-nerd-font"
 
-echo "Install powerlevel10k"
-brew install powerlevel10k
-echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
-p10k configure
+log_info "Installing powerlevel10k..."
+install_brew_package "powerlevel10k"
+if ! grep -q "powerlevel10k.zsh-theme" ~/.zshrc 2>/dev/null; then
+    echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+    log_info "Added powerlevel10k to .zshrc"
+fi
 
-echo "Install zsh-autosuggestions"
-brew install zsh-autosuggestions
-echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >>~/.zshrc
+log_info "Installing zsh plugins..."
+install_brew_package "zsh-autosuggestions"
+if ! grep -q "zsh-autosuggestions.zsh" ~/.zshrc 2>/dev/null; then
+    echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >>~/.zshrc
+fi
 
-echo "Install zsh-syntax-highlighting"
-brew install zsh-syntax-highlighting
-echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>~/.zshrc
+install_brew_package "zsh-syntax-highlighting"
+if ! grep -q "zsh-syntax-highlighting.zsh" ~/.zshrc 2>/dev/null; then
+    echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>~/.zshrc
+fi
 
-echo "Install midnight commander file manager"
-brew install mc
+log_info "Installing file managers..."
+install_brew_package "mc"
+install_brew_package "yazi"
+install_brew_package "ffmpegthumbnailer"
+install_brew_package "sevenzip"
+install_brew_package "jq"
+install_brew_package "poppler"
+install_brew_package "fd"
+install_brew_package "ripgrep"
+install_brew_package "imagemagick"
+install_brew_package "font-symbols-only-nerd-font"
 
-echo "Install yazi file manager"
-brew install yazi ffmpegthumbnailer sevenzip jq poppler fd ripgrep imagemagick font-symbols-only-nerd-font
+log_info "Installing search and navigation tools..."
+install_brew_package "fzf"
+install_brew_package "eza"
+install_brew_package "zoxide"
+install_brew_package "bat"
 
-echo "Install fzf fuzzy finder"
-# https://github.com/junegunn/fzf
-brew install fzf
-source <(fzf --zsh)
+log_info "Installing utilities..."
+install_brew_package "parallel"
+install_brew_package "gnu-sed"
 
-echo "Install ripgrep finder"
-# https://github.com/BurntSushi/ripgrep
-brew install ripgrep
+log_info "Installing monitoring tools..."
+install_brew_package "btop"
+install_brew_package "htop"
+install_brew_package "procs"
 
-echo "Install eza a better ls"
-brew install eza
+if ! sudo grep -q "NOPASSWD.*procs" /etc/sudoers 2>/dev/null; then
+    sudo tee -a /etc/sudoers <<<"$USER ALL= NOPASSWD: /usr/local/bin/procs" >/dev/null
+    log_info "Added procs to sudoers"
+fi
 
-echo "Install zoxide a better cd"
-brew install zoxide
+log_info "Installing text processing tools..."
+install_brew_package "jless"
+install_brew_package "hexyl"
+install_brew_package "yq"
+install_brew_package "noahgorstein/tap/jqp"
 
-echo "Install bat file previewer, alternative to cat"
-brew install bat
+log_info "Installing networking tools..."
+install_brew_package "wget"
+install_brew_package "telnet"
+install_brew_package "ncdu"
+install_brew_package "tldr"
 
-echo "Install GNU parallel, useful for parallel executions, ex: parallel --jobs 3 --delay 2 --timeout 5 --shuf --progress echo {1} ::: 1 2 3"
-brew install parallel
-
-echo "Installing gsed to manipulate files, similar to sed but with more compatibility with linux"
-brew install gnu-sed --with-default-names
-
-## MONITORING
-
-echo "Install btop and htop process managers"
-brew install btop htop
-
-echo "Install procs process manager, a ps alternative, use with sudo"
-# https://github.com/dalance/procs
-brew install procs
-sudo tee -a /etc/sudoers <<<"$USER ALL= NOPASSWD: /usr/local/bin/procs"
-source <(procs --gen-completion-out zsh)
-
-## TEXT PROCESSING
-echo "Install json viewer"
-brew install jless
-
-echo "Install hex, a binary viewer"
-brew install hexyl
-
-echo "Installing yq to parse yaml files, similar to jq"
-brew install yq
-
-echo "Installing jqp to manipulate json files, similar to jq"
-brew install noahgorstein/tap/jqp
-
-## NETWORKING
-echo "Install wget to download files as alternative to curl"
-brew install wget
-
-echo "Install telnet for oldies"
-brew install telnet
-
-echo "Install disk usage analyzer"
-brew install ncdu
-
-echo "Install tldr as alternative to man"
-brew install tldr
+log_success "CLI tools installation completed!"

@@ -1,6 +1,16 @@
-echo "Installing redis"
-brew install redis
+#!/bin/bash
 
-echo "Installing mysql client for VIM to connect to DBs. Use 8.0 for native password support"
-brew install mysql-client@8.0
-brew link --overwrite mysql-client@8.0 --force
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/common-functions.sh"
+source_versions
+
+log_info "Starting database tools installation..."
+
+log_info "Installing redis..."
+install_brew_package "redis"
+
+log_info "Installing mysql client ${MYSQL_CLIENT_VERSION} for VIM DB connections..."
+install_brew_package "mysql-client@${MYSQL_CLIENT_VERSION}"
+brew link --overwrite "mysql-client@${MYSQL_CLIENT_VERSION}" --force 2>/dev/null || true
+
+log_success "Database tools installation completed!"
