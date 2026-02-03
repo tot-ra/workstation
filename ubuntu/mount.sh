@@ -3,7 +3,11 @@ alias o="opencode"
 alias ls="eza --long --header --icons --octal-permissions --no-user --no-permissions"
 
 # better cd
-eval "$(zoxide init zsh)"
+if [ -n "$ZSH_VERSION" ]; then
+    eval "$(zoxide init zsh)"
+elif [ -n "$BASH_VERSION" ]; then
+    eval "$(zoxide init bash)"
+fi
 
 # name tmux sessions after the current directory
 alias tm='tmux new -s `basename $PWD`'
