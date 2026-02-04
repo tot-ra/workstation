@@ -65,6 +65,16 @@
       },
       "enabled": true,
       "timeout": 60000,
+    },
+
+    "google-calendar": {
+      "type": "local",
+      "command": ["npx", "-y", "@cocal/google-calendar-mcp"],
+      "environment": {
+        "GOOGLE_OAUTH_CREDENTIALS": "./google_calendar_client_secret.json",
+      },
+      "enabled": true,
+      "timeout": 60000,
     }
 
   },
