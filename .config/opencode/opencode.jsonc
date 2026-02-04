@@ -3,7 +3,7 @@
   "plugin": ["opencode-scheduler"],
 
   // Модульные инструкции агента
-  "instructions": ["agent/rules/*.md"],
+  "instructions": [".opencode/rules/*.md"],
 
   "mcp": {
     "context7-library-docs": {
