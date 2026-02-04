@@ -53,5 +53,19 @@
       "enabled": false,
       "timeout": 60000,
     },
+
+    "x-twitter": {
+      "type": "local",
+      "command": ["npx", "-y", "@mbelinky/x-mcp-server"],
+      "environment": {
+        "API_KEY": "{env:API_KEY}",
+        "API_SECRET_KEY": "{env:API_SECRET_KEY}",
+        "ACCESS_TOKEN": "{env:ACCESS_TOKEN}",
+        "ACCESS_TOKEN_SECRET": "{env:ACCESS_TOKEN_SECRET}",
+      },
+      "enabled": true,
+      "timeout": 60000,
+    }
+
   },
 }
