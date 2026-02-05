@@ -30,6 +30,9 @@ config.macos_window_background_blur = 30
 config.audible_bell = "Disabled"
 config.check_for_updates = false
 
+-- Enable OSC 52 clipboard integration for SSH/tmux
+config.enable_csi_u_key_encoding = true
+
 config.keys = {
 	{ key = "v", mods = "CMD", action = wezterm.action({
 		PasteFrom = "Clipboard",

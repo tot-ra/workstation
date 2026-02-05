@@ -9,6 +9,10 @@ ln -s ~/git/workstation/.tmux.conf ~/.tmux.conf
 rm -rf ~/.config/nvim
 ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 
+# Wezterm config (symlink)
+rm -rf ~/.config/wezterm
+ln -s ~/git/workstation/.config/wezterm ~/.config/wezterm
+
 # Opencode config (symlink)
 rm -rf ~/.config/opencode
 ln -s ~/git/workstation/.config/opencode ~/.config/opencode
