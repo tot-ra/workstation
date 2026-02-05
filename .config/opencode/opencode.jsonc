@@ -5,6 +5,12 @@
   // Модульные инструкции агента
   "instructions": [".opencode/rules/*.md", ".opencode/skills/*.md"],
 
+  "permission": {
+    "external_directory": {
+      "~/git/**": "allow"
+    }
+  },
+
   "mcp": {
     "context7-library-docs": {
       "type": "local",
