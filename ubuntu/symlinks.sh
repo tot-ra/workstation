@@ -33,6 +33,9 @@ link_config "$HOME/git/workstation/.config/wezterm" "$HOME/.config/wezterm"
 # Opencode config directory
 link_config "$HOME/git/workstation/.config/opencode" "$HOME/.config/opencode"
 
+# Opencode rules and skills directory (referenced by opencode.jsonc)
+link_config "$HOME/git/workstation/.opencode" "$HOME/.opencode"
+
 echo "Symlinks created successfully"
 echo ""
 echo "Note: Make sure to run this script on each machine where you want to use these configs."
