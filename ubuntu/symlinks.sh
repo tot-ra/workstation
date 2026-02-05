@@ -1,28 +1,39 @@
 #!/bin/bash
+set -e
+
 echo "Creating symlinks for configuration files"
 
-# Tmux config (symlink)
-rm -rf ~/.tmux.conf
-ln -s ~/git/workstation/.tmux.conf ~/.tmux.conf
+# Helper function to create symlink
+link_config() {
+    local src="$1"
+    local dest="$2"
+    
+    # Remove existing file/symlink if it exists
+    if [ -e "$dest" ] || [ -L "$dest" ]; then
+        rm -rf "$dest"
+    fi
+    
+    # Create parent directory if needed
+    mkdir -p "$(dirname "$dest")"
+    
+    # Create symlink
+    ln -s "$src" "$dest"
+    echo "Linked: $dest -> $src"
+}
 
-# Nvim config (symlink)
-rm -rf ~/.config/nvim
-ln -s ~/git/workstation/.config/nvim ~/.config/nvim
+# Tmux config
+link_config "$HOME/git/workstation/.tmux.conf" "$HOME/.tmux.conf"
 
-# Wezterm config (symlink)
-rm -rf ~/.config/wezterm
-ln -s ~/git/workstation/.config/wezterm ~/.config/wezterm
+# Nvim config
+link_config "$HOME/git/workstation/.config/nvim" "$HOME/.config/nvim"
 
-# Opencode config (symlink)
-rm -rf ~/.config/opencode
-ln -s ~/git/workstation/.config/opencode ~/.config/opencode
+# Wezterm config
+link_config "$HOME/git/workstation/.config/wezterm" "$HOME/.config/wezterm"
 
-# Google Calendar MCP credentials (symlink)
-ln -sf ~/git/mind/google_calendar_client_secret.json ~/git/workstation/google_calendar_client_secret.json
-
-# Opencode config (symlinks)
-mkdir -p ~/.config/opencode
-ln -sf ~/git/workstation/opencode.jsonc ~/.config/opencode/opencode.jsonc
-ln -sf ~/git/workstation/.opencode ~/.config/opencode/.opencode
+# Opencode config directory
+link_config "$HOME/git/workstation/.config/opencode" "$HOME/.config/opencode"
 
 echo "Symlinks created successfully"
+echo ""
+echo "Note: Make sure to run this script on each machine where you want to use these configs."
+echo "The workstation repo should contain actual files, not symlinks."
