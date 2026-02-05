@@ -31,6 +31,9 @@ sudo snap install --beta nvim --classic
 echo "Installing tmux"
 sudo apt install tmux -y
 
+echo "Installing xclip for clipboard support"
+sudo apt install xclip -y
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Sync configurations via symlinks
