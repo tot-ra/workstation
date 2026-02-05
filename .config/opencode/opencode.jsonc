@@ -11,6 +11,10 @@
     }
   },
 
+  // Model preferences - priority order
+  "model": "opencode/kimi-k2.5-free",
+  "small_model": "opencode/kimi-k2.5-free",
+
   "mcp": {
     "context7-library-docs": {
       "type": "local",
