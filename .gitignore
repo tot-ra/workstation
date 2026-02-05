@@ -15,3 +15,6 @@ backup-*/
 
 # Credentials symlinks
 google_calendar_client_secret.json
+
+# Agent memory and tasks (symlink to external dir)
+mind/
