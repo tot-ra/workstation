@@ -22,7 +22,7 @@
   "agent": {
     // PLANNER: Планирование, анализ, спецификации
     "planner": {
-      "model": "google/gemini-2.0-flash-001",
+      "model": "google/gemini-2.5-flash",
       "description": "Task planning, requirements analysis, specification creation",
       "instructions": [".opencode/agents/planner.md"],
       "tools": {
@@ -84,7 +84,7 @@
 
     // DOCS: Документация
     "docs": {
-      "model": "openai/gpt-4o-mini",
+      "model": "google/gemini-2.5-flash",
       "description": "Documentation generation, README updates, inline docs",
       "instructions": [".opencode/agents/docs.md"],
       "tools": {
@@ -99,7 +99,7 @@
 
     // RESEARCH: Исследования
     "research": {
-      "model": "perplexity/sonar-deep-research",
+      "model": "google/gemini-2.5-flash",
       "description": "Technical research, library investigation, solutions exploration",
       "instructions": [".opencode/agents/research.md"],
       "tools": {
