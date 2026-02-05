@@ -11,6 +11,9 @@ echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/w
 sudo apt update
 sudo apt install wezterm
 
+echo "Installing wezterm terminfo (fixes 'missing or unsuitable terminal' in tmux)"
+tempfile=$(mktemp) && curl -o $tempfile https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo && tic -x -o ~/.terminfo $tempfile && rm $tempfile
+
 echo "Installing latest neovim"
 #sudo add-apt-repository ppa:neovim-ppa/stable -y
 #sudo add-apt-repository ppa:neovim-ppa/unstable -y
