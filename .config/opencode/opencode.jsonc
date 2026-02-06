@@ -3,20 +3,17 @@
   "plugin": ["opencode-scheduler"],
 
   // Модульные инструкции агента (базовые + агент-специфичные)
-  "instructions": [
-    ".opencode/rules/*.md",
-    ".opencode/skills/*.md"
-  ],
+  "instructions": [".opencode/rules/*.md", ".opencode/skills/*.md"],
 
   "permission": {
     "external_directory": {
-      "~/git/**": "allow"
-    }
+      "~/git/**": "allow",
+    },
   },
 
   // Модель по умолчанию (fallback)
-  "model": "opencode/kimi-k2.5-free",
-  "small_model": "opencode/kimi-k2.5-free",
+  "model": "google/gemini-3-pro-preview",
+  "small_model": "google/gemini-2.5-flash",
 
   // ============ КАСТОМНЫЕ АГЕНТЫ ============
   "agent": {
@@ -32,8 +29,8 @@
         "grep": true,
         "glob": true,
         "websearch": true,
-        "webfetch": true
-      }
+        "webfetch": true,
+      },
     },
 
     // DEVELOPER: Разработка, кодирование, терминал
@@ -49,13 +46,13 @@
         "glob": true,
         "bash": true,
         "codesearch": true,
-        "task": true
-      }
+        "task": true,
+      },
     },
 
     // TESTER: Тестирование, ревью, валидация
     "tester": {
-      "model": "opencode/kimi-k2.5-free",
+      "model": "anthropic/claude-sonnet-4-5",
       "description": "Code review, test writing, functionality validation",
       "instructions": [".opencode/agents/tester.md"],
       "tools": {
@@ -65,8 +62,8 @@
         "grep": true,
         "glob": true,
         "bash": true,
-        "task": true
-      }
+        "task": true,
+      },
     },
 
     // REVIEWER: Архитектурное ревью, качество кода
@@ -78,8 +75,8 @@
         "read": true,
         "grep": true,
         "glob": true,
-        "task": true
-      }
+        "task": true,
+      },
     },
 
     // DOCS: Документация
@@ -93,8 +90,8 @@
         "edit": true,
         "grep": true,
         "glob": true,
-        "webfetch": true
-      }
+        "webfetch": true,
+      },
     },
 
     // RESEARCH: Исследования
@@ -106,8 +103,8 @@
         "websearch": true,
         "webfetch": true,
         "codesearch": true,
-        "read": true
-      }
+        "read": true,
+      },
     },
 
     // OPS: DevOps, CI/CD
@@ -121,9 +118,9 @@
         "edit": true,
         "bash": true,
         "grep": true,
-        "glob": true
-      }
-    }
+        "glob": true,
+      },
+    },
   },
 
   // ============ MCP СЕРВЕРЫ ============
@@ -132,31 +129,37 @@
       "type": "local",
       "command": ["npx", "-y", "@upstash/context7-mcp@latest"],
       "enabled": false,
-      "timeout": 60000
+      "timeout": 60000,
     },
     "github": {
       "type": "local",
       "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
       "environment": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}",
       },
       "enabled": true,
-      "timeout": 60000
+      "timeout": 60000,
     },
     "search-internet-perplexity": {
       "type": "local",
       "command": ["npx", "-y", "perplexity-mcp"],
       "environment": {
-        "PERPLEXITY_API_KEY": "{env:PERPLEXITY_API_KEY}"
+        "PERPLEXITY_API_KEY": "{env:PERPLEXITY_API_KEY}",
       },
       "enabled": true,
-      "timeout": 60000
+      "timeout": 60000,
     },
     "chrome-devtools": {
       "type": "local",
-      "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--browserUrl", "http://127.0.0.1:9222"],
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--browserUrl",
+        "http://127.0.0.1:9222",
+      ],
       "enabled": true,
-      "timeout": 60000
+      "timeout": 60000,
     },
     "mcp_server_mysql": {
       "type": "local",
@@ -168,10 +171,10 @@
         "MYSQL_PASS": "test",
         "ALLOW_INSERT_OPERATION": "false",
         "ALLOW_UPDATE_OPERATION": "false",
-        "ALLOW_DELETE_OPERATION": "false"
+        "ALLOW_DELETE_OPERATION": "false",
       },
       "enabled": false,
-      "timeout": 60000
+      "timeout": 60000,
     },
     "x-twitter": {
       "type": "local",
@@ -180,19 +183,19 @@
         "API_KEY": "{env:API_KEY}",
         "API_SECRET_KEY": "{env:API_SECRET_KEY}",
         "ACCESS_TOKEN": "{env:ACCESS_TOKEN}",
-        "ACCESS_TOKEN_SECRET": "{env:ACCESS_TOKEN_SECRET}"
+        "ACCESS_TOKEN_SECRET": "{env:ACCESS_TOKEN_SECRET}",
       },
       "enabled": true,
-      "timeout": 60000
+      "timeout": 60000,
     },
     "google-calendar": {
       "type": "local",
       "command": ["npx", "-y", "@cocal/google-calendar-mcp"],
       "environment": {
-        "GOOGLE_OAUTH_CREDENTIALS": "./google_calendar_client_secret.json"
+        "GOOGLE_OAUTH_CREDENTIALS": "./google_calendar_client_secret.json",
       },
       "enabled": true,
-      "timeout": 60000
-    }
-  }
+      "timeout": 60000,
+    },
+  },
 }

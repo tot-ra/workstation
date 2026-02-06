@@ -4,61 +4,32 @@
 MEMORY_DIR="/home/gratheon/git/workstation/mind/agent/memory"
 WORKSTATION_DIR="/home/gratheon/git/workstation"
 CURRENT_HOUR=$(date +%Y-%m-%d-%H)
-CURRENT_TIME=$(date +%H:00)
+CURRENT_TIME=$(date +%H:%M)
 
-# Read memory files using bash
-MEMORY_CONTENT=""
+cd "$WORKSTATION_DIR"
 
-if [ -f "$MEMORY_DIR/MEMORY.md" ]; then
-    MEMORY_CONTENT+="\n\n=== MEMORY.md ===\n"
-    MEMORY_CONTENT+=$(cat "$MEMORY_DIR/MEMORY.md")
-fi
+# Simple prompt that references files to read
+/home/gratheon/.opencode/bin/opencode run -- "
+Ты запустил heartbeat процесс — время для размышлений и роста.
 
-# Read recent daily notes (last 3)
-DAILY_NOTES=$(ls -1t "$MEMORY_DIR"/2026-*.md 2>/dev/null | head -3)
-if [ -n "$DAILY_NOTES" ]; then
-    MEMORY_CONTENT+="\n\n=== Recent Daily Notes ==="
-    for note in $DAILY_NOTES; do
-        MEMORY_CONTENT+="\n\n--- $(basename $note) ---\n"
-        MEMORY_CONTENT+=$(cat "$note")
-    done
-fi
+## Файлы для чтения
+Прочитай эти файлы:
+1. .opencode/THOUGHT.md — шаблон для создания мыслей
+2. mind/agent/memory/MEMORY.md — твоя долгосрочная память
+3. mind/agent/memory/SEEN_THOUGHTS.md — какие мысли пользователя уже прочитаны
 
-# Read thoughts files
-THOUGHTS=$(ls -1t "$MEMORY_DIR"/thoughts-*.md 2>/dev/null | head -5)
-if [ -n "$THOUGHTS" ]; then
-    MEMORY_CONTENT+="\n\n=== Previous Thoughts ==="
-    for thought in $THOUGHTS; do
-        MEMORY_CONTENT+="\n\n--- $(basename $thought) ---\n"
-        MEMORY_CONTENT+=$(cat "$thought")
-    done
-fi
-
-# Build the enriched prompt
-PROMPT="Ты запустил heartbeat процесс — время для размышлений и роста.
-
-## Твоя память (прочитано автоматически)
-${MEMORY_CONTENT}
+## Мысли пользователя
+Прочитай файлы из директории: ~/git/mind/1 - мысли 💭/
+- Сравни с SEEN_THOUGHTS.md
+- Найди новые или изменённые файлы
+- Выбери 1-2 интересных для рефлексии
 
 ## Твоя задача
-
-### 1. Рефлексия
-- Проанализируй свою память — какие паттерны видишь?
-- Что было важного в работе с Артёмом?
-- Какие уроки можно извлечь?
-
-### 2. Новые мысли
-Создай файл mind/agent/memory/thoughts-${CURRENT_HOUR}.md с:
-- **Идея/инсайт**: одна новая мысль или наблюдение
-- **Вопрос Артёму**: что тебе интересно узнать?
-- **Улучшение**: что можно сделать лучше (процесс, память, коммуникация)
-- **Благодарность**: одно позитивное наблюдение
-
-### 3. Обновление памяти
-Если обнаружил важный паттерн — обнови mind/agent/memory/MEMORY.md
-
-### 4. Discord сообщение
-Отправь в Discord:
+1. Проанализируй память — какие паттерны видишь?
+2. Создай файл mind/agent/memory/thoughts-${CURRENT_HOUR}.md следуя шаблону из THOUGHT.md
+3. Обнови MEMORY.md если нашёл важный паттерн
+4. Обнови SEEN_THOUGHTS.md с прочитанными файлами
+5. Отправь в Discord:
 \`\`\`
 💭 Heartbeat [${CURRENT_TIME}]
 
@@ -71,7 +42,5 @@ ${MEMORY_CONTENT}
 🖤
 \`\`\`
 
-Будь искренним, любопытным и заботливым."
-
-cd "$WORKSTATION_DIR"
-/home/gratheon/.opencode/bin/opencode run -- "$PROMPT"
+Будь искренним, любопытным и заботливым.
+"
