@@ -6,7 +6,16 @@
 
 ID канала берётся из переменной окружения `$DISCORD_CHANNEL_ID` (должна быть установлена в `.env` или окружении).
 
-## Команда
+## Инструменты
+
+Используй готовый скрипт:
+
+```bash
+cd .opencode/tools/discord-notifications
+./notify.sh "Сообщение"
+```
+
+Или напрямую:
 
 ```bash
 npx -y kimaki send --channel "$DISCORD_CHANNEL_ID" --prompt "Сообщение" --notify-only

@@ -95,73 +95,21 @@ systemctl --user restart opencode-job-<name>.timer
 
 ## Создание задачи со скриптом
 
-Для сложных задач (чтение файлов, обработка данных) создайте bash-скрипт:
+Для сложных задач (чтение файлов, обработка данных):
 
 ```bash
-# 1. Создайте скрипт
-mkdir -p ~/.config/opencode/jobs
-cat > ~/.config/opencode/jobs/my-task.sh << 'SCRIPT'
-#!/bin/bash
-# Описание задачи
-
-WORK_DIR="/home/gratheon/git/project"
-cd "$WORK_DIR"
-
-# Чтение файлов с пробелами в именах
-FILES=$(find "$WORK_DIR" -name "*.md" -type f 2>/dev/null | head -5)
-CONTENT=""
-while IFS= read -r file; do
-    CONTENT+="\n\n--- $(basename "$file") ---\n"
-    CONTENT+=$(cat "$file")
-done <<< "$FILES"
-
-# Формирование промпта через heredoc (избегает проблем с кавычками)
-PROMPT=$(cat <<EOF
-Проанализируй файлы:
-${CONTENT}
-
-Сделай выводы.
-EOF
-)
-
-/home/gratheon/.opencode/bin/opencode run -- "$PROMPT"
-SCRIPT
-
-chmod +x ~/.config/opencode/jobs/my-task.sh
-
-# 2. Создайте сервис вручную
-cat > ~/.config/systemd/user/opencode-job-my-task.service << 'EOF'
-[Unit]
-Description=OpenCode Job: my-task
-
-[Service]
-Type=oneshot
-ExecStart=/home/gratheon/.config/opencode/jobs/my-task.sh
-StandardOutput=append:/home/gratheon/.config/opencode/logs/my-task.log
-StandardError=append:/home/gratheon/.config/opencode/logs/my-task.log
-
-[Install]
-WantedBy=default.target
-EOF
-
-# 3. Создайте таймер
-cat > ~/.config/systemd/user/opencode-job-my-task.timer << 'EOF'
-[Unit]
-Description=Timer for: my-task
-
-[Timer]
-OnCalendar=*-*-* 09:00:00
-Persistent=true
-
-[Install]
-WantedBy=timers.target
-EOF
-
-# 4. Активируйте
-systemctl --user daemon-reload
-systemctl --user enable opencode-job-my-task.timer
-systemctl --user start opencode-job-my-task.timer
+cd .opencode/tools/periodic-jobs
+./create_job_with_script.sh my-task "0 9 * * *" /home/gratheon/project "*.md"
 ```
+
+Или используй вспомогательные скрипты:
+
+| Скрипт | Описание |
+|--------|----------|
+| `create_job.sh` | Создать простую задачу |
+| `create_job_with_script.sh` | Создать задачу с кастомным скриптом |
+| `list_jobs.sh` | Показать все задачи |
+| `delete_job.sh` | Удалить задачу |
 
 ## Важные нюансы bash-скриптов
 
