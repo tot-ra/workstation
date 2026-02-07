@@ -32,7 +32,11 @@ curl -fsSL https://tailscale.com/install.sh | sh
 echo "Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 source ~/.zshrc
-nvm install 20
+nvm install 22
+
+echo "Installing pnpm"
+. $HOME/.nvm/nvm.sh && nvm use 22 && npm install -g pnpm
+
 
 ./install-go.sh
 ./install-nvim-tmux.sh
