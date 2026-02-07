@@ -14,21 +14,38 @@ sudo apt install wezterm
 echo "Installing wezterm terminfo (fixes 'missing or unsuitable terminal' in tmux)"
 tempfile=$(mktemp) && curl -o $tempfile https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo && tic -x -o ~/.terminfo $tempfile && rm $tempfile
 
-echo "Installing latest neovim"
-#sudo add-apt-repository ppa:neovim-ppa/stable -y
-#sudo add-apt-repository ppa:neovim-ppa/unstable -y
-#sudo apt update
-#sudo apt install neovim -y
-#apt-cache policy neovim
+echo "Installing stable neovim v0.11.6"
+# Download pre-built binary from GitHub releases (stable version)
+# This avoids issues with snap/unstable versions that may crash with LazyVim
+NVIM_VERSION="0.11.6"
+NVIM_DIR="$HOME/.local/bin/nvim-stable"
+NVIM_BIN="$HOME/.local/bin/nvim"
 
-sudo snap install --beta nvim --classic
+mkdir -p "$NVIM_DIR"
+cd "$NVIM_DIR"
 
+# Detect architecture
+ARCH=$(uname -m)
+if [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
+    NVIM_ARCH="arm64"
+elif [ "$ARCH" = "x86_64" ]; then
+    NVIM_ARCH="x86_64"
+else
+    echo "Unsupported architecture: $ARCH"
+    exit 1
+fi
 
-# in case you don't have sudo:
-#cd ~
-#curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
-#chmod u+x nvim.appimage
-# todo add alias for nvim to point to ~/nvim.appimage
+# Download and extract
+echo "Downloading nvim v${NVIM_VERSION} for ${NVIM_ARCH}..."
+wget -q "https://github.com/neovim/neovim/releases/download/v${NVIM_VERSION}/nvim-linux-${NVIM_ARCH}.tar.gz" -O nvim.tar.gz
+tar -xzf nvim.tar.gz
+rm nvim.tar.gz
+
+# Create symlink
+ln -sf "$NVIM_DIR/nvim-linux-${NVIM_ARCH}/bin/nvim" "$NVIM_BIN"
+
+echo "Nvim v${NVIM_VERSION} installed to $NVIM_BIN"
+$NVIM_BIN --version | head -1
 
 
 echo "Installing tmux"
