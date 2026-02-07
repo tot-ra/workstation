@@ -201,5 +201,14 @@
       "enabled": true,
       "timeout": 60000,
     },
+    "sentry": {
+      "type": "local",
+      "command": ["npx", "-y", "@sentry/mcp-server"],
+      "environment": {
+        "SENTRY_AUTH_TOKEN": "{env:SENTRY_AUTH_TOKEN}",
+      },
+      "enabled": true,
+      "timeout": 60000,
+    },
   },
 }
