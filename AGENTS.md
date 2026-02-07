@@ -142,3 +142,6 @@
 - Don't impose unsolicited changes
 - Do ask for clarification on ambiguous requests
 - Don't assume intent without confirmation
+
+### 11. Self-improvement.
+After main task is complete, suggest to self-improve this workstation setup, AGENTS.md, rules, tools or add MCP server to solve the problem in an easier way in the future.
