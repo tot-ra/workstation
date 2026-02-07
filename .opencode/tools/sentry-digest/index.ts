@@ -70,11 +70,6 @@ async function fetchIssues(): Promise<SentryIssue[]> {
             }
         }
     } catch (error) {
-        if (axios.isAxiosError(error) && error.response) {
-            console.error(`Failed to fetch Sentry issues. Status: ${error.response.status} - ${error.response.data.detail}`);
-        } else {
-            console.error("An unknown error occurred during Sentry API fetch:", error);
-        }
         return [];
     }
     
