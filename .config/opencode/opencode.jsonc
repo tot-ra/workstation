@@ -12,7 +12,7 @@
   },
 
   // Модель по умолчанию (fallback)
-  "model": "google/gemini-3-pro-preview",
+  "model": "google/gemini-2.5-flash-preview-09-2025",
   "small_model": "google/gemini-2.5-flash",
 
   // ============ КАСТОМНЫЕ АГЕНТЫ ============

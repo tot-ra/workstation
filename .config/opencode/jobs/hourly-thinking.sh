@@ -1,46 +1,19 @@
 #!/bin/bash
-# Heartbeat thinking process - runs every hour
+#
+# OpenCode Unified Task Scheduler (hourly-thinking)
+# This script simply delegates the scheduling logic to the OpenCode agent using a single MD file.
 
-MEMORY_DIR="/home/gratheon/git/workstation/mind/agent/memory"
-WORKSTATION_DIR="/home/gratheon/git/workstation"
-CURRENT_HOUR=$(date +%Y-%m-%d-%H)
-CURRENT_TIME=$(date +%H:%M)
+# Binary path
+OPCODE_BIN="/home/gratheon/.opencode/bin/opencode"
 
-cd "$WORKSTATION_DIR"
+# MD file containing the scheduling logic
+SCHEDULER_FILE="/home/gratheon/git/mind/agent/jobs/unified-scheduler.md"
 
-# Simple prompt that references files to read
-/home/gratheon/.opencode/bin/opencode run -- "
-Ты запустил heartbeat процесс — время для размышлений и роста.
+echo "[$(date +%Y-%m-%dT%H:%M:%S)] Starting unified scheduler. Delegating to agent with $SCHEDULER_FILE."
 
-## Файлы для чтения
-Прочитай эти файлы:
-1. .opencode/THOUGHT.md — шаблон для создания мыслей
-2. mind/agent/memory/MEMORY.md — твоя долгосрочная память
-3. mind/agent/memory/SEEN_THOUGHTS.md — какие мысли пользователя уже прочитаны
+# Execute the agent with the scheduler file.
+# The agent will determine which sub-task to run (or self-reflect) based on the time.
+# The final result of this run should be a successful execution of a sub-task or self-reflection.
+$OPCODE_BIN run "$(cat $SCHEDULER_FILE)"
 
-## Мысли пользователя
-Прочитай файлы из директории: ~/git/mind/1 - мысли 💭/
-- Сравни с SEEN_THOUGHTS.md
-- Найди новые или изменённые файлы
-- Выбери 1-2 интересных для рефлексии
-
-## Твоя задача
-1. Проанализируй память — какие паттерны видишь?
-2. Создай файл mind/agent/memory/thoughts-${CURRENT_HOUR}.md следуя шаблону из THOUGHT.md
-3. Обнови MEMORY.md если нашёл важный паттерн
-4. Обнови SEEN_THOUGHTS.md с прочитанными файлами
-5. Отправь в Discord:
-\`\`\`
-💭 Heartbeat [${CURRENT_TIME}]
-
-Сегодня я думаю о: [тема]
-
-Вопрос Артёму: [вопрос]
-
-Хочу улучшить: [что именно]
-
-🖤
-\`\`\`
-
-Будь искренним, любопытным и заботливым.
-"
+echo "[$(date +%Y-%m-%dT%H:%M:%S)] Unified scheduler run finished."
