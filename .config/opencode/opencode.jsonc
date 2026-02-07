@@ -3,7 +3,11 @@
   "plugin": ["opencode-scheduler"],
 
   // Модульные инструкции агента (базовые + агент-специфичные)
-  "instructions": [".opencode/rules/*.md", ".opencode/skills/*.md"],
+  "instructions": [
+    "AGENTS.md",
+    ".opencode/rules/*.md",
+    ".opencode/skills/*.md",
+  ],
 
   "permission": {
     "external_directory": {
