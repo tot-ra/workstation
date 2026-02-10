@@ -39,6 +39,7 @@ echo "Installing pnpm"
 
 
 ./install-go.sh
+./install-go-tools.sh
 ./install-nvim-tmux.sh
 ./install-docker-k8s.sh
 ./install-cli.sh
