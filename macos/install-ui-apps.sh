@@ -10,15 +10,15 @@ install_brew_cask "wezterm"
 install_brew_cask "visual-studio-code"
 
 if [ -x "./install-vscode.sh" ]; then
-    log_info "Installing VSCode extensions..."
-    ./install-vscode.sh
+  log_info "Installing VSCode extensions..."
+  ./install-vscode.sh
 fi
 
 log_info "Installing productivity tools..."
 install_brew_cask "bitwarden"
 install_brew_package "maccy"
-install_brew_package "tailscale"
-install_brew_package "ngrok/ngrok/ngrok"
+install_brew_cask "tailscale"
+install_brew_cask "ngrok/ngrok/ngrok"
 
 log_info "Installing utilities..."
 install_brew_cask "vlc"
@@ -26,6 +26,7 @@ install_brew_cask "grandperspective"
 
 log_info "Installing communication tools..."
 install_brew_cask "slack"
+install_brew_cask "discord"
 
 log_info "Installing note-taking and documentation..."
 install_brew_cask "obsidian"

@@ -5,7 +5,7 @@ This includes setup scripts for Mac and Ubuntu.
 
 <img width="1920" alt="nvim-tmux" src="https://github.com/user-attachments/assets/9816d8bf-22be-43be-92f4-95d0a402edf6">
 
-#### Mac settings
+### MacOS settings setup
 
 - Keyboard -> Input Sources -> change language to CMD + Space
 - Keyboard -> Spotlight - change to CMD + Shift + Space
@@ -19,7 +19,11 @@ This includes setup scripts for Mac and Ubuntu.
 - Keyboard -> Text Input -> Disable most things
 - Keyboard -> Accessibility -> Disable VoiceOver
 
-#### Maccy app setup
+### TMux setup
+run tmux and install it:
+`F1` + `I`
+
+### Maccy app setup
 - Launch at setup
 - Open with Shift+CMD+V (shifted paste)
 - Fuzzy search
