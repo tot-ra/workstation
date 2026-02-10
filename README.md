@@ -19,6 +19,12 @@ This includes setup scripts for Mac and Ubuntu.
 - Keyboard -> Text Input -> Disable most things
 - Keyboard -> Accessibility -> Disable VoiceOver
 
+#### Maccy app setup
+- Launch at setup
+- Open with Shift+CMD+V (shifted paste)
+- Fuzzy search
+- Paste automatically
+
 #### Window management shortcuts (with Rectangle)
 
 - <kbd>§</kbd> - center window
