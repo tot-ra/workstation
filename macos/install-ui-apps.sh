@@ -21,17 +21,13 @@ install_brew_package "tailscale"
 install_brew_package "ngrok/ngrok/ngrok"
 
 log_info "Installing utilities..."
-install_brew_cask "keka"
-install_brew_cask "kap"
 install_brew_cask "vlc"
 install_brew_cask "grandperspective"
-install_brew_package "devtoys"
 
 log_info "Installing communication tools..."
 install_brew_cask "slack"
 
 log_info "Installing note-taking and documentation..."
-install_brew_cask "notion"
 install_brew_cask "obsidian"
 
 log_info "Installing media..."
