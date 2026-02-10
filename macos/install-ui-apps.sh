@@ -6,7 +6,7 @@ source "$SCRIPT_DIR/common-functions.sh"
 log_info "Starting UI applications installation..."
 
 log_info "Installing terminal and development tools..."
-install_brew_cask "warp"
+install_brew_cask "wezterm"
 install_brew_cask "visual-studio-code"
 
 if [ -x "./install-vscode.sh" ]; then
