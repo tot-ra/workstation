@@ -32,11 +32,12 @@ config.check_for_updates = false
 
 -- Enable OSC 52 clipboard integration for SSH/tmux
 -- This allows remote applications (tmux, nvim) to copy to local clipboard
-config.enable_csi_u_key_encoding = true
+-- Note: enable_csi_u_key_encoding can cause duplicate characters, disabled
+-- config.enable_csi_u_key_encoding = true
 
--- Ensure OSC 52 clipboard integration is enabled
--- Wezterm supports OSC 52 by default, but we explicitly configure it here
-config.term = "wezterm"
+-- Use xterm-256color for better compatibility
+-- Wezterm supports OSC 52 by default
+config.term = "xterm-256color"
 
 config.keys = {
 	{ key = "v", mods = "CMD", action = wezterm.action({

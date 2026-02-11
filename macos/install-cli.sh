@@ -22,6 +22,7 @@ fi
 log_info "Installing fonts..."
 brew tap homebrew/cask-fonts 2>/dev/null || true
 install_brew_package "font-hack-nerd-font"
+install_brew_package "font-jetbrains-mono-nerd-font"
 
 log_info "Installing powerlevel10k..."
 install_brew_package "powerlevel10k"
