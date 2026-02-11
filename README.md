@@ -18,6 +18,10 @@ This includes setup scripts for Mac and Ubuntu.
 - Keyboard -> Delay Until Repeat -> Short
 - Keyboard -> Text Input -> Disable most things
 - Keyboard -> Accessibility -> Disable VoiceOver
+- Control Center
+    - Sound -> Always Show in Menu Bar
+    - Battery -> Show Percentage
+    - Date -> Display time with seconds
 
 ### TMux setup
 run tmux and install it:
