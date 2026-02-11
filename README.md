@@ -61,7 +61,6 @@ Others need manual installation:
 - Docker4Mac
 - [Postman](https://www.postman.com/downloads/)
 - [OpenVPN](https://openvpn.net/downloads/openvpn-connect-latest.dmg)
-- RealVNC
 - Discord
 - [Monocle](https://monokle.io/download) to access k8s logs
 - Microsoft TODO

@@ -41,4 +41,7 @@ log_info "Installing development tools..."
 install_brew_cask "goland"
 install_brew_package "bruno"
 
+log_info "Installing remote access tools..."
+install_brew_cask "vnc-viewer"
+
 log_success "UI applications installation completed!"
