@@ -22,6 +22,7 @@ This includes setup scripts for Mac and Ubuntu.
     - Sound -> Always Show in Menu Bar
     - Battery -> Show Percentage
     - Date -> Display time with seconds
+    - Weather -> Show in menu
 
 ### TMux setup
 run tmux and install it:
