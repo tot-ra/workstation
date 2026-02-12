@@ -127,6 +127,34 @@
     },
   },
 
+  // ============ LM STUDIO PROVIDER ============
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:1234/v1"
+      },
+      "models": {
+        "deepseek/deepseek-r1-0528-qwen3-8b":{
+            "name": "deepseek/deepseek-r1-0528-qwen3-8b"
+          },
+        "qwen/qwen3-vl-4b": {
+            "name":"qwen3-vl-4b"
+          },
+        "openai/gpt-oss-20b":{
+            "name":"openai/gpt-oss-20b"
+          },
+        "qwen/qwen3-vl-8b": {
+            "name": "qwen/qwen3-vl-8b"
+          },
+        "zai-org/glm-4.6v-flash": {
+          "name": "GLM-4.6-flash"
+        },
+      }
+    }
+  },
+
   // ============ MCP СЕРВЕРЫ ============
   "mcp": {
     "context7-library-docs": {
