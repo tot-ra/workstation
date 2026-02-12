@@ -1,7 +1,5 @@
 ## 💻 Workstation setup
-
-Yay. You got new machine. Now you need to set it up.
-This includes setup scripts for Mac and Ubuntu.
+This is an opinionated dev setup for Mac and Ubuntu.
 
 <img width="1920" alt="nvim-tmux" src="https://github.com/user-attachments/assets/9816d8bf-22be-43be-92f4-95d0a402edf6">
 
@@ -106,6 +104,7 @@ git config --global pull.rebase false
 
 # generate key for github
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
+open "https://github.com/settings/keys"
 cat ~/.ssh/id_rsa.pub
 ```
 

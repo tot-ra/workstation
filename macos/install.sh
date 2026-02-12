@@ -26,13 +26,6 @@ else
     echo "✓ Homebrew already installed"
 fi
 
-if ! command -v nix &> /dev/null; then
-    echo "Installing Nix package manager..."
-    sh <(curl -L https://nixos.org/nix/install)
-else
-    echo "✓ Nix already installed"
-fi
-
 echo ""
 echo "Installing core components..."
 "$SCRIPT_DIR/install-git.sh"
@@ -63,6 +56,8 @@ echo "Installing additional components..."
 "$SCRIPT_DIR/install-node.sh"
 "$SCRIPT_DIR/install-python.sh"
 "$SCRIPT_DIR/install-ai.sh"
+
+"$SCRIPT_DIR/install-ui-apps.sh"
 
 echo ""
 echo "================================================"
