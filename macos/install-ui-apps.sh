@@ -32,6 +32,7 @@ log_info "Installing note-taking and documentation..."
 install_brew_cask "obsidian"
 
 log_info "Installing media..."
+install_brew_cask "obs"
 install_brew_cask "spotify"
 
 log_info "Installing window management..."
