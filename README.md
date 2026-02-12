@@ -33,6 +33,26 @@ run tmux and install it:
 - Fuzzy search
 - Paste automatically
 
+### Karabiner-Elements (Keyboard Customization)
+
+Karabiner-Elements enables custom keyboard shortcuts for Windows/Linux compatibility.
+
+**Installation:**
+```bash
+./macos/install-karabiner.sh
+```
+
+**Configured shortcuts:**
+- <kbd>Ctrl</kbd> <kbd>Insert</kbd> → Copy (maps to <kbd>Cmd</kbd> <kbd>C</kbd>)
+- <kbd>Shift</kbd> <kbd>Insert</kbd> → Paste (maps to <kbd>Cmd</kbd> <kbd>V</kbd>)
+
+**Manual setup required after installation:**
+1. Open **System Settings** → **Privacy & Security** → **Accessibility**
+2. Grant permission to **karabiner_grabber** and **karabiner_observer**
+3. You may need to restart your Mac for changes to take effect
+
+**Note:** These shortcuts require a keyboard with an Insert key (common on external/Windows keyboards). If using a Mac keyboard without Insert, you can remap another key in Karabiner's UI.
+
 #### Window management shortcuts (with Rectangle)
 
 - <kbd>§</kbd> - center window
@@ -53,7 +73,12 @@ run tmux and install it:
 
 ### Apps
 
-To install, run: `./install-ui-apps.sh`
+To install, run: `./macos/install-ui-apps.sh`
+
+**Keyboard customization:**
+```bash
+./macos/install-karabiner.sh  # Install Karabiner-Elements for custom keyboard shortcuts
+```
 
 Others need manual installation:
 
@@ -438,6 +463,32 @@ ln -s ~/git/workstation/.config/nvim ~/.config/nvim
 
 # Restart nvim and run
 :Lazy restore
+```
+
+#### Karabiner keyboard shortcuts not working
+**Problem**: Control+Insert and Shift+Insert shortcuts don't work
+
+**Solution**:
+```bash
+# Check if Karabiner is running
+ps aux | grep karabiner
+
+# Verify permissions in System Settings
+# Go to: Privacy & Security → Accessibility
+# Ensure karabiner_grabber and karabiner_observer are checked
+
+# Check if your keyboard has an Insert key
+# External/Windows keyboards usually have it
+# Mac keyboards typically don't
+
+# View current configuration
+cat ~/.config/karabiner/karabiner.json
+
+# Restart Karabiner
+killall karabiner_grabber karabiner_observer
+# Or restart from the menu bar icon
+
+# If still not working, you may need to restart your Mac
 ```
 
 ### Performance Issues
