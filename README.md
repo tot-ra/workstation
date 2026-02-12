@@ -106,6 +106,7 @@ git config --global pull.rebase false
 
 # generate key for github
 ssh-keygen -t rsa -b 4096 -C "artkurapov@gmail.com"
+open "https://github.com/settings/keys"
 cat ~/.ssh/id_rsa.pub
 ```
 
